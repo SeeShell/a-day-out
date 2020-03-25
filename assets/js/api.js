@@ -1,12 +1,14 @@
 
-var region1 = ["america", "europe", "africa", "asia"]
-var region2 = ["america", "europe", "africa", "asia"]
-$("a").on("click", function() {
-    var region1 = $(this)[0].id
+// -------------------------THE MET API---------------------------------
+// var region1 = ["america", "europe", "africa", "asia"]
+// var region2 = ["america", "europe", "africa", "asia"]
+// $("a").on("click", function() {
+//      var region1 = $(this)[0].id
       var region1 = "Asia"
       var region2 = "Europe"
       var queryURL1 = "https://collectionapi.metmuseum.org/public/collection/v1/search?geoLocation="+region1+"&q=statue&medium=Sculpture&hasImages=true";
       var queryURL2 = "https://collectionapi.metmuseum.org/public/collection/v1/search?geoLocation="+region2+"&q=statue&medium=Sculpture&hasImages=true";
+      
       console.log(region1)
       console.log(region2)
 
@@ -46,7 +48,7 @@ $("a").on("click", function() {
               .then(function (response) {
                   console.log(response)
 
-                  var imageUrl=response.primaryImage
+                  var imageUrl=response.primaryImageSmall
                   var artist =response.artistDisplayName
                   var title = response.title
                 
@@ -55,8 +57,6 @@ $("a").on("click", function() {
                   var country = response.country
                   var dimensions = response.dimensions
                   // var metLink = response. 
-
-                  console.log(dimensions)
 
                 if (artist=== ""){
                   artist.text
@@ -102,7 +102,7 @@ $("a").on("click", function() {
                   .then(function (response) {
                       console.log(response)
 
-                      var imageUrl=response.primaryImage
+                      var imageUrl=response.primaryImageSmall
                       var artist =response.artistDisplayName
                       var title = response.title
                     
@@ -111,8 +111,6 @@ $("a").on("click", function() {
                       var country = response.country
                       var dimensions = response.dimensions
                       // var metLink = response. 
-
-                      console.log(dimensions)
 
                     if (artist=== ""){
                       artist.text
@@ -145,4 +143,6 @@ $("a").on("click", function() {
                     }
                   });
             };
-  });
+  // });
+
+  // -------------------------EDAMAM API---------------------------------

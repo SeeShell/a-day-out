@@ -1,7 +1,14 @@
 
 var region = ["america", "europe", "africa", "asia"]
-$(index.html).ready(function(){
-    $("#openLink").click(function(){
-        $(region[i])
+$("button").on("click", function() {
+    var region = $(this).attr("location-button");
+    var queryURL = "" +
+      region + "";
+
+    $.ajax({
+      url: queryURL,
+      method: "GET"
+    }).then(function(response) {
+         console.log(response);
     })
 })

@@ -219,80 +219,51 @@ var region2 = localStorage.getItem("region2");
 
 // -------------------------EDAMAM API---------------------------------
 
-// -------------------------REGION 1 RECIPE----------------------------
-$("#region1-recipe").on("click", function() {
-  var APIid = "1da6de4c";
-  var APIKey = "b4525aef1893921308c30d0194460591";
-  var queryURL =
-    "https://api.edamam.com/search?q=" +
-    region1 +
-    "&app_id=" +
-    APIid +
-    "&app_key=" +
-    APIKey;
-
-  //recipe from the region you were in
-  $.ajax({
-    url: queryURL,
-    method: "GET"
-  }).then(function(response) {
-    var recipeArray = response.hits;
-    var randRecipe =
-      recipeArray[Math.floor(Math.random() * recipeArray.length)];
-    // out of random objects fitting criteria call function
-    renderRecipe(randRecipe);
-  });
-
-  function renderRecipe(randRecipe) {
-    //get recipes title, image, and link
-    var recipeTitle = $("<p>").text(randRecipe.recipe.label);
-    var recipeImage = $("<img>").attr("src", randRecipe.recipe.image);
-    var recipeHealth = $("<p>").text(randRecipe.recipe.healthLabels);
-    var recipeURL = $("<a>")
-      .attr("href", randRecipe.recipe.url)
-      .text("See Full Recipe");
-    $("#region1-recipe-div").append(recipeTitle);
-    $("#region1-recipe-div").append(recipeImage);
-    $("#region1-recipe-div").append(recipeURL);
-    $("#region1-recipe-div").append(recipeHealth);
+$("button").on("click", function() {
+  var buttonID = $(this).attr("id");
+  if (buttonID === "region1-recipe"){
+    var region = localStorage.getItem("region1");
+    var recipeDiv = $("#region1-recipe-div")
+    recipeDiv.empty();
+    getRandRecipe(region, recipeDiv);
+  }else if (buttonID === "region2-recipe"){
+    var region = localStorage.getItem("region2");
+    var recipeDiv = $("#region2-recipe-div")
+    recipeDiv.empty();
+    getRandRecipe(region, recipeDiv);
   }
 });
 
-// -------------------------REGION 2 RECIPE----------------------------
-$("#region2-recipe-div").on("click", function() {
+// //recipe from the region you were in
+function getRandRecipe(region, recipeDiv){
   var APIid = "1da6de4c";
   var APIKey = "b4525aef1893921308c30d0194460591";
-  var queryURL =
-    "https://api.edamam.com/search?q=" +
-    region2 +
-    "&app_id=" +
-    APIid +
-    "&app_key=" +
-    APIKey;
-
-  //recipe from the region you were in
+  var queryURL = "https://api.edamam.com/search?q="+region+"&app_id="+APIid+"&app_key="+APIKey;
+  for (var i = 0; i <3;i++){
   $.ajax({
-    url: queryURL,
-    method: "GET"
-  }).then(function(response) {
-    var recipeArray = response.hits;
-    var randRecipe =
-      recipeArray[Math.floor(Math.random() * recipeArray.length)];
-    // out of random objects fitting criteria call function
-    renderRecipe(randRecipe);
-  });
+      url: queryURL,
+      method: "GET"
+    }).then(function(response) { 
+      var recipeArray = response.hits;
+      var randRecipe = recipeArray[Math.floor(Math.random() * recipeArray.length)];
+      
+      // out of random objects fitting criteria call function
+      renderRecipe(randRecipe, recipeDiv);
+      });
+  }; 
+};
+
+function renderRecipe(randRecipe, recipeDiv){
   
-  function renderRecipe(randRecipe) {
     //get recipes title, image, and link
     var recipeTitle = $("<p>").text(randRecipe.recipe.label);
-    var recipeImage = $("<img>").attr("src", randRecipe.recipe.image);
-    var recipeHealth = $("<p>").text(randRecipe.recipe.healthLabels);
-    var recipeURL = $("<a>")
-      .attr("href", randRecipe.recipe.url)
-      .text("See Full Recipe");
-    $("#region2-recipe-div").append(recipeTitle);
-    $("#region2-recipe-div").append(recipeImage);
-    $("#region2-recipe-div").append(recipeURL);
-    $("#region2-recipe-div").append(recipeHealth);
-  }
-});
+    var recipeImage = $("<img>").attr('src',randRecipe.recipe.image);
+    var recipeHealth= $("<p>").text(randRecipe.recipe.healthLabels);
+    var recipeURL = $("<a>").attr("href", randRecipe.recipe.url).text("See Full Recipe");
+    
+    $(recipeDiv).append(recipeTitle);
+    $(recipeDiv).append(recipeImage);
+    $(recipeDiv).append(recipeURL);
+    $(recipeDiv).append(recipeHealth);
+
+  };

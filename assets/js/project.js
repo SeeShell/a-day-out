@@ -20,11 +20,9 @@ $(function() {
     url: queryURL1,
     method: "GET"
   }).then(function(response1) {
-    console.log(response1);
     var objectIDArray1 = response1.objectIDs;
     var randObjectID1 =
       objectIDArray1[Math.floor(Math.random() * objectIDArray1.length)];
-    console.log(randObjectID1);
     //out of random objects fitting criteria call function
     renderArt1(randObjectID1);
   });
@@ -34,11 +32,9 @@ $(function() {
     url: queryURL2,
     method: "GET"
   }).then(function(response2) {
-    console.log(response2);
     var objectIDArray2 = response2.objectIDs;
     var randObjectID2 =
       objectIDArray2[Math.floor(Math.random() * objectIDArray2.length)];
-    console.log(randObjectID2);
     //out of random objects fitting criteria call function
     renderArt2(randObjectID2);
   });
@@ -54,7 +50,6 @@ $(function() {
       url: queryURL,
       method: "GET"
     }).then(function(response) {
-      console.log(response);
 
       var imageUrl = response.primaryImageSmall;
       var artist = response.artistDisplayName;
@@ -64,7 +59,8 @@ $(function() {
       var medium = response.medium;
       var country = response.country;
       var dimensions = response.dimensions;
-      // var metLink = respon
+      var metLink = response.objectURL;
+  
       if (artist === "") {
         artist.text;
         $("#artist1").text("Unknown");
@@ -91,6 +87,7 @@ $(function() {
         $("#medium1").append(medium);
         $("#date1").append(date);
         $("#dimensions1").append(dimensions);
+        $("#object1-met-page").attr("href",metLink);
       }
     });
   }
@@ -106,7 +103,6 @@ $(function() {
       url: queryURL,
       method: "GET"
     }).then(function(response) {
-      console.log(response);
 
       var imageUrl = response.primaryImageSmall;
       var artist = response.artistDisplayName;
@@ -116,7 +112,7 @@ $(function() {
       var medium = response.medium;
       var country = response.country;
       var dimensions = response.dimensions;
-      // var metLink = response.
+      var metLink = response.objectURL
 
       if (artist === "") {
         artist.text;
@@ -144,6 +140,7 @@ $(function() {
         $("#date2").append(date);
         $("#medium2").append(medium);
         $("#dimensions2").append(dimensions);
+        $("#object2-met-page").attr("href",metLink);
       }
     });
   }
@@ -194,9 +191,9 @@ function renderProject(projectObj) {
   questionDiv.empty();
 
   var projectObjIndex = Math.floor(Math.random() * 3);
-  console.log(projectObjIndex);
+  
   var currentSet = projectObj[projectObjIndex];
-  console.log(currentSet);
+
   for (i in currentSet.questions) {
     var newQ = $("<p>").text(projectObj[projectObjIndex].questions[i]);
     questionDiv.append(newQ);
@@ -239,11 +236,9 @@ $("#region1-recipe").on("click", function() {
     url: queryURL,
     method: "GET"
   }).then(function(response) {
-    console.log(response);
     var recipeArray = response.hits;
     var randRecipe =
       recipeArray[Math.floor(Math.random() * recipeArray.length)];
-    console.log(randRecipe);
     // out of random objects fitting criteria call function
     renderRecipe(randRecipe);
   });
@@ -280,11 +275,9 @@ $("#region2-recipe-div").on("click", function() {
     url: queryURL,
     method: "GET"
   }).then(function(response) {
-    console.log(response);
     var recipeArray = response.hits;
     var randRecipe =
       recipeArray[Math.floor(Math.random() * recipeArray.length)];
-    console.log(randRecipe);
     // out of random objects fitting criteria call function
     renderRecipe(randRecipe);
   });

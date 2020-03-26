@@ -59,10 +59,40 @@
     </div>
 
     <div class="uk-container uk-margin">
-        
+        <ul uk-accordion="multiple: true">
+            <li class="uk-open">
+                <a class="uk-accordion-title" href="#">Questions to ask yourself:</a>
+                <div class="uk-accordion-content" id="questions-div">
+                    <p>What's different about these two objects?</p>
+                    <p>What's similar?</p>
+                    <p>What do you think the objects were used for? (i.e. decoration, devotion, etc)</p> 
+                    <p>In what context do you think the object was originally displayed?</p>
+                </div>
+            </li>
+            <li>
+                <a class="uk-accordion-title" href="#">Project:</a>
+                <div class="uk-accordion-content" id="project-div">
+                    <p>Think about how one of the objects above was used. What is something in your life that you use in the same way?</p>
+                    <p>Using a medium of your choice: draw, sculpt, or paint an item in your life that fills that function.</p>
+                </div>
+            </li>
+            <li>
+                <a class="uk-accordion-title" href="https://www.metmuseum.org/">Other resources:</a>
+                <div class="uk-accordion-content">
+                    <p>Want to know more about the objects above? Visit <a class="uk-link-muted" href="">this link</a> to access the Met's collection online and the links below for the info page on each object.</p>
+                    <p><a class="uk-link-muted" id="object1-met-page" href="">Object 1</a></p>
+                    <p><a class="uk-link-muted" id="object2-met-page" href="">Object 2</a></p>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="uk-container">
+        <p id="project-refresh" class="uk-text-lighter">Want a different project? <span uk-icon="icon: refresh"></span> </p>
     </div>
 
-
+    <footer class="uk-section-muted uk-padding">
+        <p class="uk-text-center uk-text-small uk-text-light">&copy; Sims, Mountain, Burrell 2020</p>
+    </footer>
 <!-- JQuery -->
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- UIkit JS -->

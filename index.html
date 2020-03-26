@@ -35,24 +35,39 @@
 
     <div class="uk-container">
         <h1 class="uk-heading-small">A Day Out</h1>
-        <p class="uk-article-meta">...but in</p>
+        <p class="uk-text-normal">...but in</p>
         <hr>
     </div>
     
     <div class="uk-article uk-container">
-        <p class="uk-text-lead">Instructions will go here... Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos consequuntur optio consequatur debitis praesentium, inventore quis dolorum possimus? Magnam, ut!</p>
+        <p class="uk-text-lighter">Instructions will go here... Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos consequuntur optio consequatur debitis praesentium, inventore quis dolorum possimus? Magnam, ut!</p>
     </div>
 
     <div class="uk-container uk-margin">
         <div class="uk-inline uk-dark">
-            <img src="https://i.pinimg.com/originals/0e/0d/70/0e0d70509fe4f2c140b987c9a823d787.png" alt="">
-            <a class="uk-position-absolute uk-transform-center" style="left: 15%; top: 30%" href="#" uk-marker id="america"></a>
-            <a class="uk-position-absolute uk-transform-center" style="left: 50%; top: 25%" href="#" uk-marker id="europe"></a>
-            <a class="uk-position-absolute uk-transform-center" style="left: 75%; top: 35%" href="#" uk-marker id="asia"></a>
-            <a class="uk-position-absolute uk-transform-center" style="left: 50%; top: 50%" href="#" uk-marker id="africa"></a>
+            <img src="https://i.pinimg.com/originals/0e/0d/70/0e0d70509fe4f2c140b987c9a823d787.png" width="1800" height="1200" alt="">
+            <a class="uk-position-absolute uk-transform-center location-button" style="left: 13%; top: 30%" href="#" uk-marker id="america"></a>
+            <a class="uk-position-absolute uk-transform-center location-button" style="left: 50%; top: 22%" href="#" uk-marker id="europe"></a>
+            <a class="uk-position-absolute uk-transform-center location-button" style="left: 75%; top: 35%" href="#" uk-marker id="asia"></a>
+            <a class="uk-position-absolute uk-transform-center location-button" style="left: 50%; top: 50%" href="#" uk-marker id="africa"></a>
         </div>
     </div>
 
+    <div class="uk-container uk-margin-bottom">
+        <div>
+            <p class="uk-margin-remove-bottom uk-text-lighter">Region 1: <span class="uk-text-normal uk-text-uppercase" id="first-region">asia</span> </p>      
+            <p class="uk-margin-remove-bottom uk-margin-remove-top uk-text-lighter">Region 2: <span class="uk-text-normal uk-text-uppercase" id="second-region">americas</span></p>
+        </div>
+        <div class="uk-text-lighter">
+            <button class="uk-button uk-button-default" id="go-button">GO!</button>
+        </div>
+        <div class="uk-align-left" id="refresh-regions" uk-icon="icon: refresh"></div>    
+    </div>
+   
+    
+    <footer class="uk-section-muted uk-padding">
+        <p class="uk-text-center uk-text-small uk-text-light">&copy; Sims, Mountain, Burrell 2020</p>
+    </footer>
 <!-- JQuery -->
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- UIkit JS -->

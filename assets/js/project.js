@@ -88,6 +88,7 @@ $(function() {
         $("#artist1").append(artist);
         $("#title1").append(title);
         $("#region1").append(country);
+        $("#medium1").append(medium);
         $("#date1").append(date);
         $("#dimensions1").append(dimensions);
       }
@@ -150,7 +151,6 @@ $(function() {
 
 
 //---------- Projects functions ------------------------------
-renderProject();
 // Questions and projects render and refresh
 var projectObj = {0: {questions: ["first question", "second question"],
                       project: ["first directive", "second directive"]},
@@ -161,12 +161,14 @@ var projectObj = {0: {questions: ["first question", "second question"],
                 }
 var questionDiv = $("#questions-div");
 var projectDiv = $("#project-div");
-
+renderProject(projectObj);
 // This function clears the question and project divs and replaces them 
 // with a randomly fetched set from the above project object
-function renderProject(){
-    questionDiv.empty();
+function renderProject(projectObj){
+    var questionDiv = $("#questions-div");
+    var projectDiv = $("#project-div");
     projectDiv.empty();
+    questionDiv .empty();
 
     var projectObjIndex = Math.floor(Math.random() * 3);
     console.log(projectObjIndex);
@@ -185,7 +187,7 @@ function renderProject(){
 
 // Event listener for a click on the project refresh button
 $("#project-refresh").on("click", function(){
-    renderProject();
+    renderProject(projectObj);
 })
 
 // Return to homepage to select new regions

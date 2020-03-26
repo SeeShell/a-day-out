@@ -35,7 +35,7 @@
         <div class="uk-child-width-expand@s uk-text-center uk-grid-match" uk-grid>
             <div>
                 <div class="uk-card uk-card-default uk-card-body">
-                    <img data-src="https://images.metmuseum.org/CRDImages/md/original/DP353830.jpg" width="" height="" alt="" uk-img>
+                    <img data-src="" width="" height="" alt="" uk-img>
                     <p class="uk-text-left uk-margin-remove uk-padding-remove uk-text-small">Artist: <span id="artist1"></span></p>
                     <p class="uk-text-left uk-margin-remove uk-padding-remove uk-text-small">Title: <span id="title1"></span></p>
                     <p class="uk-text-left uk-margin-remove uk-padding-remove uk-text-small">Date: <span id="date1"></span></p>
@@ -46,7 +46,7 @@
             </div>
             <div>
                 <div class="uk-card uk-card-default uk-card-body">
-                    <img data-src="https://images.metmuseum.org/CRDImages/cl/original/cdi%2047-101-11as1.jpg" width="" height="" alt="" uk-img>
+                    <img data-src="" width="" height="" alt="" uk-img>
                     <p class="uk-text-left uk-margin-remove uk-padding-remove uk-text-small">Artist: <span id="artist2"></span></p>
                     <p class="uk-text-left uk-margin-remove uk-padding-remove uk-text-small">Title: <span id="title2"></span></p>
                     <p class="uk-text-left uk-margin-remove uk-padding-remove uk-text-small">Date: <span id="date2"></span></p>
@@ -70,21 +70,24 @@
                 </div>
             </li>
             <li>
-                <a class="uk-accordion-title" href="#">Project</a>
+                <a class="uk-accordion-title" href="#">Project:</a>
                 <div class="uk-accordion-content">
                     <p>Think about how one of the objects above was used. What is something in your life that you use in the same way?</p>
-                    <p>Using a medium of your choice to draw, sculpt, or paint an item in your life that fills that function.</p>
+                    <p>Using a medium of your choice: draw, sculpt, or paint an item in your life that fills that function.</p>
                 </div>
             </li>
             <li>
-                <a class="uk-accordion-title" href="#">Other resources</a>
+                <a class="uk-accordion-title" href="https://www.metmuseum.org/">Other resources:</a>
                 <div class="uk-accordion-content">
                     <p>Want to know more about the objects above? Visit <a class="uk-link-muted" href="">this link</a> to access the Met's collection online and the links below for the info page on each object.</p>
-                    <p><a class="uk-link-muted" href="">Object 1</a></p>
-                    <p><a class="uk-link-muted" href="">Object 2</a></p>
+                    <p><a class="uk-link-muted" id="object1-met-page" href="">Object 1</a></p>
+                    <p><a class="uk-link-muted" id="object2-met-page" href="">Object 2</a></p>
                 </div>
             </li>
         </ul>
+    </div>
+    <div class="uk-container">
+        <p id="project-refresh" class="uk-text-lighter">Want a different project? <span uk-icon="icon: refresh"></span> </p>
     </div>
 
     <footer class="uk-section-muted uk-padding">

@@ -15,6 +15,18 @@
 //     })
 // })
 
+// ----------- Home page click events ---------------------
+
+// Functions for GO click should go here
+
+
+// Clears the regions text area
+$("#refresh-regions").on("click", function(){
+    $("#first-region").text("");
+    $("second-region").text("");
+    // add function to clear the variables region1 and region2
+})
+
 var region1 = ["america", "europe", "africa", "asia"]
 var region2 = ["america", "europe", "africa", "asia"]
 $("button").on("click", function() {
@@ -42,7 +54,15 @@ $("button").on("click", function() {
   })
 })
 
-// Questions and Project sets
+// Adds user choice region to text area
+
+function renderRegions(regionName){
+    
+}
+
+//---------- Projects Page functions ------------------------------
+
+// Questions and projects render and refresh
 var projectObj = {0: {questions: ["first question", "second question"],
                       project: ["first directive", "second directive"]},
                   1: {questions: ["What's different about these two objects?", "What's similar?", "What do you think the objects were used for? (i.e. decoration, devotion, etc)", "In what context do you think the object was originally displayed?"],
@@ -74,6 +94,12 @@ function renderProject(){
 
 }
 
+// Event listener for a click on the project refresh button
 $("#project-refresh").on("click", function(){
     renderProject();
+})
+
+// Return to homepage to select new regions
+$("#home-refresh").on("click", function(){
+    window.location.href = "index.html";
 })

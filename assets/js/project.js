@@ -150,8 +150,16 @@ $(function() {
 // Questions and projects render and refresh
 var projectObj = {
   0: {
-    questions: ["first question", "second question"],
-    project: ["first directive", "second directive"]
+    questions: [
+      "Look at the dimensions for each object. Imagine how big the object would appear to you if you were viewing it in person. ", 
+      "How does the size of an object change the way you experience it?",
+      "Do you think the objects above are made for a public or private settings?",
+      "Does the size distance you? Or draw you in?"],
+    project: [
+      "Choose one of the objects above or find an object in your life that is similar and recreate it somehow in its opposite scale. ",
+      "For example, take a small object - like a coin - and find a way to make it huge! ",
+      "Use a medium of your choice.",
+      "Does the significance of the object change when you change its scale?"]
   },
   1: {
     questions: [
@@ -167,14 +175,14 @@ var projectObj = {
   },
   2: {
     questions: [
-      "first question here",
-      "second question here",
-      "third question here"
+      "Look at the medium for the objects above.",
+      "Could the object be made in another medium and still convey the same message?",
+      "Does the medium of the object influence the conceptual understanding, meaning, or value of the object?"
     ],
     project: [
-      "first directive here",
-      "second directive here",
-      "third directive here"
+      "Make a drawing or some other 2-D rendering of one of the subjects in the objects above.",
+      "Can a drawing of this subject make the same impact as a sculpture?",
+      "Think about the limitations of drawing an object from an image versus drawing it in person."
     ]
   }
 };

@@ -149,88 +149,143 @@ $(function() {
   }
 });
 
-
 //---------- Projects functions ------------------------------
 // Questions and projects render and refresh
-var projectObj = {0: {questions: ["first question", "second question"],
-                      project: ["first directive", "second directive"]},
-                  1: {questions: ["What's different about these two objects?", "What's similar?", "What do you think the objects were used for? (i.e. decoration, devotion, etc)", "In what context do you think the object was originally displayed?"],
-                      project: ["Think about how one of the objects above was used. What is something in your life that you use in the same way?", "Using a medium of your choice: draw, sculpt, or paint an item in your life that fills that function."]},
-                  2: {questions: ["first question here", "second question here", "third question here"],
-                      project: ["first directive here", "second directive here", "third directive here"]}
-                }
+var projectObj = {
+  0: {
+    questions: ["first question", "second question"],
+    project: ["first directive", "second directive"]
+  },
+  1: {
+    questions: [
+      "What's different about these two objects?",
+      "What's similar?",
+      "What do you think the objects were used for? (i.e. decoration, devotion, etc)",
+      "In what context do you think the object was originally displayed?"
+    ],
+    project: [
+      "Think about how one of the objects above was used. What is something in your life that you use in the same way?",
+      "Using a medium of your choice: draw, sculpt, or paint an item in your life that fills that function."
+    ]
+  },
+  2: {
+    questions: [
+      "first question here",
+      "second question here",
+      "third question here"
+    ],
+    project: [
+      "first directive here",
+      "second directive here",
+      "third directive here"
+    ]
+  }
+};
 var questionDiv = $("#questions-div");
 var projectDiv = $("#project-div");
+
 renderProject(projectObj);
-// This function clears the question and project divs and replaces them 
+// This function clears the question and project divs and replaces them
 // with a randomly fetched set from the above project object
-function renderProject(projectObj){
-    var questionDiv = $("#questions-div");
-    var projectDiv = $("#project-div");
-    projectDiv.empty();
-    questionDiv .empty();
+function renderProject(projectObj) {
+  var questionDiv = $("#questions-div");
+  var projectDiv = $("#project-div");
+  projectDiv.empty();
+  questionDiv.empty();
 
-    var projectObjIndex = Math.floor(Math.random() * 3);
-    console.log(projectObjIndex);
-    var currentSet = projectObj[projectObjIndex];
-    console.log(currentSet)
-    for (i in currentSet.questions){
-        var newQ = $("<p>").text(projectObj[projectObjIndex].questions[i]);
-        questionDiv.append(newQ);
-    };
-    for (i in currentSet.project){
-        var newP = $("<p>").text(projectObj[projectObjIndex].project[i]);
-        projectDiv.append(newP);
-    };
-
+  var projectObjIndex = Math.floor(Math.random() * 3);
+  console.log(projectObjIndex);
+  var currentSet = projectObj[projectObjIndex];
+  console.log(currentSet);
+  for (i in currentSet.questions) {
+    var newQ = $("<p>").text(projectObj[projectObjIndex].questions[i]);
+    questionDiv.append(newQ);
+  }
+  for (i in currentSet.project) {
+    var newP = $("<p>").text(projectObj[projectObjIndex].project[i]);
+    projectDiv.append(newP);
+  }
 }
 
 // Event listener for a click on the project refresh button
-$("#project-refresh").on("click", function(){
-    renderProject(projectObj);
-})
+$("#project-refresh").on("click", function() {
+  renderProject(projectObj);
+});
 
 // Return to homepage to select new regions
-$("#home-refresh").on("click", function(){
-    window.location.href = "index.html";
-})
+$("#home-refresh").on("click", function() {
+  window.location.href = "index.html";
+});
 
+var region1 = localStorage.getItem("region1");
+var region2 = localStorage.getItem("region2");
 
 // -------------------------EDAMAM API---------------------------------
 
-// $("a").on("click", function() {
+// -------------------------REGION 1 RECIPE----------------------------
+$("#region1-recipe").on("click", function() {
+  var APIid = "1da6de4c";
+  var APIKey = "b4525aef1893921308c30d0194460591";
+  var queryURL =
+    "https://api.edamam.com/search?q=" +
+    region1 +
+    "&app_id=" +
+    APIid +
+    "&app_key=" +
+    APIKey;
 
-//   var region1 = "asian"
-//   var APIid = "1da6de4c";
-//   var APIKey = "b4525aef1893921308c30d0194460591";
-//   var queryURL = "https://api.edamam.com/search?q="+region1+"&app_id="+APIid+"&app_key="+APIKey;
+  //recipe from the region you were in
+  $.ajax({
+    url: queryURL,
+    method: "GET"
+  }).then(function(response) {
+    console.log(response);
+    var recipeArray = response.hits;
+    var randRecipe =
+      recipeArray[Math.floor(Math.random() * recipeArray.length)];
+    console.log(randRecipe);
+    // out of random objects fitting criteria call function
+    renderRecipe(randRecipe);
+  });
 
-// //recipe from the region you were in
-// for (var i = 0; i <3;i++){
-// $.ajax({
-//     url: queryURL,
-//     method: "GET"
-//   }).then(function(response) {
-//     console.log(response);
-//     var recipeArray = response.hits;
-//     var randRecipe = recipeArray[Math.floor(Math.random() * recipeArray.length)];
-//     console.log(randRecipe)
-//     // out of random objects fitting criteria call function
-//     renderRecipe(randRecipe);
-//     });
+  function renderRecipe(randRecipe) {
+    //get recipes title, image, and link
+    var recipeTitle = $("<p>").text(randRecipe.recipe.label);
+    var recipeImage = $("<img>").attr("src", randRecipe.recipe.image);
+    var recipeHealth = $("<p>").text(randRecipe.recipe.healthLabels);
+    var recipeURL = $("<a>")
+      .attr("href", randRecipe.recipe.url)
+      .text("See Full Recipe");
+    $(".recipe").append(recipeTitle);
+    $(".recipe").append(recipeImage);
+    $(".recipe").append(recipeURL);
+    $(".recipe").append(recipeHealth);
+  }
+});
 
-//   function renderRecipe(randRecipe){
-//       //get recipes title, image, and link
-//       var recipeTitle = $("<p>").text(randRecipe.recipe.label);
-//       var recipeImage = $("<img>").attr('src',randRecipe.recipe.image);
-//       var recipeHealth= $("</p>").text(randRecipe.recipe.healthLabels);
-//       var recipeURL= $("<p>").text(randRecipe.recipe.url);
-//       $(".recipe").append(recipeTitle);
-//       $(".recipe").append(recipeImage);
-//       $(".recipe").append(recipeURL);
-//       $(".recipe").append(recipeHealth);
+// -------------------------REGION 2 RECIPE----------------------------
+$("#region2-recipe").on("click", function() {
+  var APIid = "1da6de4c";
+  var APIKey = "b4525aef1893921308c30d0194460591";
+  var queryURL =
+    "https://api.edamam.com/search?q=" +
+    region2 +
+    "&app_id=" +
+    APIid +
+    "&app_key=" +
+    APIKey;
 
-//     };
-//   }
-
-// });
+  //recipe from the region you were in
+  $.ajax({
+    url: queryURL,
+    method: "GET"
+  }).then(function(response) {
+    console.log(response);
+    var recipeArray = response.hits;
+    var randRecipe =
+      recipeArray[Math.floor(Math.random() * recipeArray.length)];
+    console.log(randRecipe);
+    // out of random objects fitting criteria call function
+    renderRecipe(randRecipe);
+  });
+});

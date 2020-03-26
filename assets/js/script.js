@@ -1,4 +1,20 @@
 
+
+// var region = ["America", "Europe", "Africa", "Asia"]
+
+// $("location-button").on("click", function() {
+//     var region = $(this).attr("id");
+//     var queryURL = ""
+
+//     $.ajax({
+//       url: queryURL,
+//       method: "GET"
+//     }).then(function(response) {
+//          console.log(response);
+
+//     })
+// })
+
 var region1 = ["america", "europe", "africa", "asia"]
 var region2 = ["america", "europe", "africa", "asia"]
 $("button").on("click", function() {
@@ -25,3 +41,4 @@ $("button").on("click", function() {
        console.log(response);
   })
 })
+

@@ -9,11 +9,11 @@ $(function() {
   var queryURL1 =
     "https://collectionapi.metmuseum.org/public/collection/v1/search?geoLocation=" +
     region1 +
-    "&q=statue&medium=Sculpture&hasImages=true";
+    "&q=statue&medium=Sculpture";
   var queryURL2 =
     "https://collectionapi.metmuseum.org/public/collection/v1/search?geoLocation=" +
     region2 +
-    "&q=statue&medium=Sculpture&hasImages=true";
+    "&q=statue&medium=Sculpture";
 
   //ART SPOT #1
   $.ajax({

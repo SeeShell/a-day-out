@@ -256,15 +256,15 @@ $("#region1-recipe").on("click", function() {
     var recipeURL = $("<a>")
       .attr("href", randRecipe.recipe.url)
       .text("See Full Recipe");
-    $(".recipe").append(recipeTitle);
-    $(".recipe").append(recipeImage);
-    $(".recipe").append(recipeURL);
-    $(".recipe").append(recipeHealth);
+    $("#region1-recipe-div").append(recipeTitle);
+    $("#region1-recipe-div").append(recipeImage);
+    $("#region1-recipe-div").append(recipeURL);
+    $("#region1-recipe-div").append(recipeHealth);
   }
 });
 
 // -------------------------REGION 2 RECIPE----------------------------
-$("#region2-recipe").on("click", function() {
+$("#region2-recipe-div").on("click", function() {
   var APIid = "1da6de4c";
   var APIKey = "b4525aef1893921308c30d0194460591";
   var queryURL =
@@ -288,4 +288,18 @@ $("#region2-recipe").on("click", function() {
     // out of random objects fitting criteria call function
     renderRecipe(randRecipe);
   });
+  
+  function renderRecipe(randRecipe) {
+    //get recipes title, image, and link
+    var recipeTitle = $("<p>").text(randRecipe.recipe.label);
+    var recipeImage = $("<img>").attr("src", randRecipe.recipe.image);
+    var recipeHealth = $("<p>").text(randRecipe.recipe.healthLabels);
+    var recipeURL = $("<a>")
+      .attr("href", randRecipe.recipe.url)
+      .text("See Full Recipe");
+    $("#region2-recipe-div").append(recipeTitle);
+    $("#region2-recipe-div").append(recipeImage);
+    $("#region2-recipe-div").append(recipeURL);
+    $("#region2-recipe-div").append(recipeHealth);
+  }
 });

@@ -1,49 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>A DAY OUT</title>
 
     <!-- UIkit CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.3.7/dist/css/uikit.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/uikit@3.3.7/dist/css/uikit.min.css"
+    />
 
-    
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
-    
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
     <nav class="uk-navbar-container uk-margin" uk-navbar="mode: click">
-        <div class="uk-navbar-left">
-    
-            <ul class="uk-navbar-nav">
-                <li class="uk-active"><a href="index.html">Home</a></li>
-                <li>
-                    <a href="#">Activities</a>
-                    <div class="uk-navbar-dropdown">
-                        <ul class="uk-nav uk-navbar-dropdown-nav">
-                            <li class="uk-active"><a href="project.html">Projects</a></li>
-                            <li class="uk-active"><a href="search.html">Search</a></li>
-                        </ul>
-                    </div>
-                </li>
-                <li><a href="#">Etc</a></li>
-            </ul>
-    
-        </div>
+      <div class="uk-navbar-left">
+        <ul class="uk-navbar-nav">
+          <li class="uk-active"><a href="index.html">Home</a></li>
+          <li>
+            <a href="#">Activities</a>
+            <div class="uk-navbar-dropdown">
+              <ul class="uk-nav uk-navbar-dropdown-nav">
+                <li class="uk-active"><a href="project.html">Projects</a></li>
+                <li class="uk-active"><a href="search.html">Search</a></li>
+              </ul>
+            </div>
+          </li>
+          <li><a href="#">Etc</a></li>
+        </ul>
+      </div>
     </nav>
 
+    <div
+      class="uk-card uk-card-default uk-card-body uk-width-1-2@m"
+      id="flash-card"
+    ></div>
+    <button
+      class="uk-button uk-button-default"
+      type="button"
+      uk-toggle="target: #offcanvas-flip"
+      id="flash-card-button"
+    >
+      FLIP!
+    </button>
 
-    
-       
+    <div id="offcanvas-flip" uk-offcanvas="flip: true; overlay: true">
+      <div class="uk-offcanvas-bar">
+        <button class="uk-offcanvas-close" type="button" uk-close></button>
+      </div>
+    </div>
+
     <footer class="uk-section-muted uk-padding">
-        <p class="uk-text-center uk-text-small uk-text-light">&copy; Sims, Mountain, Burrell 2020</p>
+      <p class="uk-text-center uk-text-small uk-text-light">
+        &copy; Sims, Mountain, Burrell 2020
+      </p>
     </footer>
-<!-- UIkit JS -->
-<script src="https://cdn.jsdelivr.net/npm/uikit@3.3.7/dist/js/uikit.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/uikit@3.3.7/dist/js/uikit-icons.min.js"></script>
-<!--Our JS-->
-<script src ="assets/js/api.js"></script>
-<script src ="assets/js/script.js"></script>
-</body>
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.3.7/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.3.7/dist/js/uikit-icons.min.js"></script>
+    <!--Our JS-->
+    <script src="assets/js/api.js"></script>
+    <script src="assets/js/script.js"></script>
+  </body>
 </html>

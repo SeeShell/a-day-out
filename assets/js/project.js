@@ -5,6 +5,7 @@ if (region1 === null || region2 === null) {
   window.location.href = "index.html";
 }
 
+
 $(function() {
   var queryURL1 =
     "https://collectionapi.metmuseum.org/public/collection/v1/search?geoLocation=" +
@@ -20,11 +21,16 @@ $(function() {
     url: queryURL1,
     method: "GET"
   }).then(function(response1) {
+    var objectID1 = localStorage.getItem("objectID1");
+    
+    if (objectID1===null) {
     var objectIDArray1 = response1.objectIDs;
     var randObjectID1 =
       objectIDArray1[Math.floor(Math.random() * objectIDArray1.length)];
+     localStorage.setItem("objectID1",randObjectID1);
+    }
     //out of random objects fitting criteria call function
-    renderArt1(randObjectID1);
+    renderArt1(randObjectID1, objectID1);
   });
 
   //ART SPOT #2
@@ -32,19 +38,29 @@ $(function() {
     url: queryURL2,
     method: "GET"
   }).then(function(response2) {
+    var objectID2 = localStorage.getItem("objectID2");
+    
+    if (objectID2===null) {
     var objectIDArray2 = response2.objectIDs;
     var randObjectID2 =
       objectIDArray2[Math.floor(Math.random() * objectIDArray2.length)];
+     localStorage.setItem("objectID2",randObjectID2);
+    }
     //out of random objects fitting criteria call function
-    renderArt2(randObjectID2);
+    renderArt2(randObjectID2, objectID2);
   });
 
   // get art from objectID ART #1
-  function renderArt1(randObjectID1) {
-    //UV place UFL
+  function renderArt1(randObjectID1, objectID1) {
+  if (randObjectID1 == null){
+    var queryURL =
+    "https://collectionapi.metmuseum.org/public/collection/v1/objects/" +
+    objectID1;
+  }else{
     var queryURL =
       "https://collectionapi.metmuseum.org/public/collection/v1/objects/" +
       randObjectID1;
+    }
 
     $.ajax({
       url: queryURL,
@@ -93,12 +109,16 @@ $(function() {
   }
 
   // get art from objectID ART #2
-  function renderArt2(randObjectID2) {
-    //UV place UFL
-    var queryURL =
+  function renderArt2(randObjectID2, objectID2) {
+    if (randObjectID2 == null){
+      var queryURL =
       "https://collectionapi.metmuseum.org/public/collection/v1/objects/" +
-      randObjectID2;
-
+      objectID2;
+    }else{
+      var queryURL =
+        "https://collectionapi.metmuseum.org/public/collection/v1/objects/" +
+        randObjectID2;
+      }
     $.ajax({
       url: queryURL,
       method: "GET"
@@ -274,18 +294,16 @@ function getRandRecipe(region, recipeDiv){
   var APIid = "1da6de4c";
   var APIKey = "b4525aef1893921308c30d0194460591";
   var queryURL = "https://api.edamam.com/search?q="+region+"&app_id="+APIid+"&app_key="+APIKey;
-  for (var i = 0; i <3;i++){
+
   $.ajax({
       url: queryURL,
       method: "GET"
     }).then(function(response) { 
       var recipeArray = response.hits;
       var randRecipe = recipeArray[Math.floor(Math.random() * recipeArray.length)];
-      
       // out of random objects fitting criteria call function
       renderRecipe(randRecipe, recipeDiv);
       });
-  }; 
 };
 
 function renderRecipe(randRecipe, recipeDiv){

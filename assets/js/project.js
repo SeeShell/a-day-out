@@ -267,18 +267,16 @@ function getRandRecipe(region, recipeDiv){
   var APIid = "1da6de4c";
   var APIKey = "b4525aef1893921308c30d0194460591";
   var queryURL = "https://api.edamam.com/search?q="+region+"&app_id="+APIid+"&app_key="+APIKey;
-  for (var i = 0; i < 3;i++){
+
   $.ajax({
       url: queryURL,
       method: "GET"
     }).then(function(response) { 
       var recipeArray = response.hits;
       var randRecipe = recipeArray[Math.floor(Math.random() * recipeArray.length)];
-      
       // out of random objects fitting criteria call function
       renderRecipe(randRecipe, recipeDiv);
       });
-  }; 
 };
 
 function renderRecipe(randRecipe, recipeDiv){

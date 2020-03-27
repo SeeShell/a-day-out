@@ -82,11 +82,14 @@
         </div>
         <div>
           <div class="uk-card uk-card-default uk-card-body">
-              <a class="uk-link-muted"
+            <a
+              class="uk-link-muted"
               id="object2-met-page"
               target="_blank"
-              href=""><img data-src="" width="" height="" alt="" uk-img id="image2" /></a>
-            
+              href=""
+              ><img data-src="" width="" height="" alt="" uk-img id="image2"
+            /></a>
+
             <p
               class="uk-text-left uk-margin-remove uk-padding-remove uk-text-small"
             >
@@ -165,56 +168,59 @@
       <p id="home-refresh" class="uk-text-lighter">
         Want to choose new regions? <span uk-icon="icon: refresh"></span>
       </p>
-    </div>
 
-    <hr />
-    <div class="uk-container uk-margin-bottom">
-      <p class="uk-text-lighter">
-        Click the links below for cuisine ideas from the above regions.
-      </p>
-      <div class="uk-inline">
-        <button
-          class="uk-button uk-button-default"
-          id="region1-recipe"
-          type="button"
-        >
-          Region 1
-        </button>
-        <div uk-drop="pos: top-right">
-          <div class="uk-card uk-card-body uk-card-default">
-            <div id="region1-recipe-div"></div>
-            <div
-              id="edamam-badge"
-              data-color="white"
-              
-            ></div>
-          </div>
-        </div>
+      <hr />
+      <div class="uk-container uk-margin-bottom">
+        <p class="uk-text-lighter">
+          Click the links below for cuisine ideas from the above regions.
+        </p>
       </div>
-    </div>
-    <div class="uk-container uk-margin-bottom">
-        
+      <div class="uk-child-width-1-4@s" uk-grid>
         <div class="uk-inline">
           <button
             class="uk-button uk-button-default"
-            id="region2-recipe"
+            id="region1-recipe"
             type="button"
           >
-            Region 2
+            Region 1
           </button>
+
           <div uk-drop="pos: top-right">
             <div class="uk-card uk-card-body uk-card-default">
               <div id="region1-recipe-div"></div>
+
               <div
                 id="edamam-badge"
                 data-color="white"
-                
+                style="max-width: 50%;"
               ></div>
             </div>
           </div>
         </div>
-      </div>
 
+        <div class="uk-container uk-margin-bottom">
+          <div class="uk-inline">
+            <button
+              class="uk-button uk-button-default"
+              id="region2-recipe"
+              type="button"
+            >
+              Region 2
+            </button>
+            <div uk-drop="pos: top-right">
+              <div class="uk-card uk-card-body uk-card-default">
+                <div id="region2-recipe-div"></div>
+                <div
+                  id="edamam-badge"
+                  data-color="white"
+                  style="max-width: 50%"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <footer class="uk-section-muted uk-padding">
       <p class="uk-text-center uk-text-small uk-text-light">
         &copy; Sims, Mountain, Burrell 2020

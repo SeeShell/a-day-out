@@ -184,6 +184,33 @@ var projectObj = {
       "Can a drawing of this subject make the same impact as a sculpture?",
       "Think about the limitations of drawing an object from an image versus drawing it in person."
     ]
+  },
+  3: {
+    questions:[
+      "Think about the setting that these objects would have originally been displayed.",
+      "Was it outdoors? Was it indoors with electric lighting? Was it candlelit? Was it dark or bright?",
+      "How do you think the objects would look in different lighting?"
+    ],
+    project:[
+      "Find an object made from similar materials as one of the objects above and bring it into different environments to see how it looks in different light.",
+      "Make a sculpture from a medium that you think would respond to or look differently in different lights and repeat the exercise above.",
+      "Take pictures of your sculpture in these different environments and compare how it translates in images."
+    ]
+  },
+  4: {
+    questions:[
+      "For each object ask these questions:",
+      "Why was the object made?",
+      "Who was it made for?",
+      "Why was it made from this particular material?",
+      "Where would it have been displayed?"
+    ],
+    project:[
+      "Choose a question above - ex: 'why this object was made' - and pick an object in your life that fills that role.",
+      "Make that object out of a material you know will last for only a short time.",
+      "For example, make a paper sculpture that you place outside knowing that the first rain will destroy it. Watch it be destroyed. This is hard! But it is good!",
+      "Think about why material choice is important for the meaning and lifetime of your art project."
+    ]
   }
 };
 var questionDiv = $("#questions-div");

@@ -23,35 +23,36 @@
             <div class="uk-navbar-dropdown">
               <ul class="uk-nav uk-navbar-dropdown-nav">
                 <li class="uk-active"><a href="project.html">Projects</a></li>
-                <li class="uk-active"><a href="search.html">Search</a></li>
+                <li class="uk-active"><a href="search.html">Flip Cards</a></li>
               </ul>
             </div>
           </li>
-          <li><a href="#">Etc</a></li>
+          <!-- <li><a href="#">Etc</a></li> -->
         </ul>
       </div>
     </nav>
 
-    <div
-      class="uk-card uk-card-default uk-card-body uk-width-1-2@m"
-      id="flash-card"
-    ></div>
-    <button
-      class="uk-button uk-button-default"
-      type="button"
-      uk-toggle="target: #offcanvas-flip"
-      id="flash-card-button"
-    >
-      FLIP!
-    </button>
+    <div class="uk-container">
+      <div
+        class="uk-card uk-card-default uk-card-body uk-width-1-2@m"
+        id="flash-card"
+      ></div>
+      <button
+        class="uk-button uk-button-default"
+        type="button"
+        uk-toggle="target: #offcanvas-flip"
+        id="flash-card-button"
+      >
+        FLIP!
+      </button>
 
-    <div id="offcanvas-flip" uk-offcanvas="flip: true; overlay: true">
-      <div class="uk-offcanvas-bar">
-        <button class="uk-offcanvas-close" type="button" uk-close></button>
+      <div id="offcanvas-flip" uk-offcanvas="flip: true; overlay: true">
+        <div class="uk-offcanvas-bar">
+          <button class="uk-offcanvas-close" type="button" uk-close></button>
+        </div>
       </div>
     </div>
-
-    <footer class="uk-section-muted uk-padding">
+    <footer class="uk-section-muted uk-padding uk-position-bottom">
       <p class="uk-text-center uk-text-small uk-text-light">
         &copy; Sims, Mountain, Burrell 2020
       </p>

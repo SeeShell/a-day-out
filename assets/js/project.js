@@ -293,8 +293,27 @@ $("button").on("click", function() {
 function getRandRecipe(region, recipeDiv){
   var APIid = "1da6de4c";
   var APIKey = "b4525aef1893921308c30d0194460591";
+  if (region==="North and Central America")
+  {var queryURL = "https://api.edamam.com/search?q=American&app_id="+APIid+"&app_key="+APIKey;
+  }
+  else if(region==="South America")
+  {var queryURL = "https://api.edamam.com/search?q=Brazilian&app_id="+APIid+"&app_key="+APIKey;
+  }
+  else if(region==="Europe")
+  {var queryURL = "https://api.edamam.com/search?q=European&app_id="+APIid+"&app_key="+APIKey;
+  }
+  else if(region==="Asia")
+  {var queryURL = "https://api.edamam.com/search?q=Asian&app_id="+APIid+"&app_key="+APIKey;
+  }
+  else if(region==="India")
+  {var queryURL = "https://api.edamam.com/search?q=Indian&app_id="+APIid+"&app_key="+APIKey;
+  }
+  else if(region==="Africa")
+  {var queryURL = "https://api.edamam.com/search?q=African&app_id="+APIid+"&app_key="+APIKey;
+  }
+  else{
   var queryURL = "https://api.edamam.com/search?q="+region+"&app_id="+APIid+"&app_key="+APIKey;
-
+  }
   $.ajax({
       url: queryURL,
       method: "GET"

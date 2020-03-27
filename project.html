@@ -7,8 +7,9 @@
 
     <!-- UIkit CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.3.7/dist/css/uikit.min.css" />
-
     <link rel="stylesheet" href="assets/css/style.css">
+    <!--Edamam API attribution-->
+    <script src="https://developer.edamam.com/attribution/badge.js"></script>
 </head>
 <body>
     
@@ -32,7 +33,7 @@
         </div>
     </nav>
     <div class="uk-container">
-        <div class="uk-child-width-expand@s uk-text-center uk-grid-match" uk-grid>
+        <div class="uk-child-width-expand@s uk-grid-match" uk-grid>
             <div>
                 <div class="uk-card uk-card-default uk-card-body">
                     <img data-src="" width="" height="" alt="" uk-img id="image1">
@@ -42,6 +43,7 @@
                     <p class="uk-text-left uk-margin-remove uk-padding-remove uk-text-small">Region: <span id="region1"></span></p>
                     <p class="uk-text-left uk-margin-remove uk-padding-remove uk-text-small">Medium: <span id="medium1"></span></p>
                     <p class="uk-text-left uk-margin-remove uk-padding-remove uk-text-small">Dimensions: <span id="dimensions1"></span></p>
+                    <p class="uk-text-left uk-text-small uk-padding-top">Chosen region: <span id="userChoice1"></span></p>
                 </div>
             </div>
             <div>
@@ -53,6 +55,7 @@
                     <p class="uk-text-left uk-margin-remove uk-padding-remove uk-text-small">Region: <span id="region2"></span></p>
                     <p class="uk-text-left uk-margin-remove uk-padding-remove uk-text-small">Medium: <span id="medium2"></span></p>
                     <p class="uk-text-left uk-margin-remove uk-padding-remove uk-text-small">Dimensions: <span id="dimensions2"></span></p>
+                    <p class="uk-text-left uk-text-small uk-padding-top">Chosen region: <span id="userChoice2"></span></p>
                 </div>
             </div>
         </div>
@@ -91,24 +94,26 @@
     <hr> 
     <div class="uk-container uk-margin-bottom">
             <p class="uk-text-lighter">Click the links below for cuisine ideas from the above regions.</p>
-            <button class="uk-button uk-button-default" id="region1-recipe" type="button" uk-toggle="target: #offcanvas-flip-1">Region 1</button>
-
-            <div id="offcanvas-flip-1" uk-offcanvas="overlay: true">
-                <div class="uk-offcanvas-bar"> 
-                    <button class="uk-offcanvas-close" type="button" uk-close></button>
-                    <div id="region1-recipe-div" ></div>      
+            <div class="uk-inline">
+                <button class="uk-button uk-button-default" id="region1-recipe" type="button">Region 1</button>
+                <div uk-drop="pos: top-right">
+                    <div class="uk-card uk-card-body uk-card-default">
+                        <div id="region1-recipe-div"></div>
+                        <div id="edamam-badge" data-color="white" style="max-width: 20px"></div>
+                    </div>
                 </div>
-    
             </div>
     </div>
     <div class="uk-container uk-margin-bottom">
-            <button class="uk-button uk-button-default" id="region2-recipe" type="button" uk-toggle="target: #offcanvas-flip-2">Region 2</button>
-    
-            <div id="offcanvas-flip-2" uk-offcanvas="flip: true; overlay: true">
-                <div class="uk-offcanvas-bar" id="region2-recipe-div"> 
-                <button class="uk-offcanvas-close" type="button" uk-close></button>
+        <div class="uk-inline">
+            <button class="uk-button uk-button-default" id="region2-recipe" type="button">Region 2</button>
+            <div uk-drop="pos: top-right">
+                <div class="uk-card uk-card-body uk-card-default">
+                    <div id="region2-recipe-div"></div>
+                    <div id="edamam-badge" data-color="white" style="max-width: 20px"></div>
                 </div>
             </div>
+        </div>
         
     </div>
     

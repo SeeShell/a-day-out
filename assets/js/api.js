@@ -25,6 +25,9 @@ $(function() {
   $("#go-button").on("click", function(event) {
     if (region1 !== "" && region2 !== "") {
       window.location.href = "project.html";
+      localStorage.removeItem("objectID1");
+      localStorage.removeItem("objectID2");
+
     }
   });
 });

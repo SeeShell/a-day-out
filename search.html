@@ -16,9 +16,12 @@
   <body>
     <nav class="uk-navbar-container uk-margin" uk-navbar="mode: click">
       <div class="uk-navbar-left">
+        <a class="uk-logo uk-margin-left uk-margin-right" href="index.html">A DAY OUT</a>
         <ul class="uk-navbar-nav">
-          <li class="uk-active"><a href="index.html">Home</a></li>
-          <li>
+          <li class="uk-active">
+            <a class="uk-logo" href="index.html">HOME</a>
+          </li>
+          <li class="uk-active">
             <a href="#">Activities</a>
             <div class="uk-navbar-dropdown">
               <ul class="uk-nav uk-navbar-dropdown-nav">
@@ -31,20 +34,23 @@
         </ul>
       </div>
     </nav>
-    
+
     <div class="uk-container">
       <div
         class="uk-card uk-card-default uk-card-body uk-width-1-2@m"
         id="flash-card"
       ></div>
       <!-- This is an anchor toggling the modal -->
-      <a href="#modal-flash-card" id="flash-card-button" uk-toggle><span class="uk-icon-link uk-margin-small-right" uk-icon="reply"></span>FLIP</a>
+      <a href="#modal-flash-card" id="flash-card-button" uk-toggle
+        ><span class="uk-icon-link uk-margin-small-right" uk-icon="reply"></span
+        >FLIP</a
+      >
 
       <!-- This is the modal -->
       <div id="modal-flash-card" uk-modal>
-        <div class="uk-modal-dialog uk-modal-body" >
+        <div class="uk-modal-dialog uk-modal-body">
           <div id="flash-card-div"></div>
-          
+
           <p class="uk-text-right">
             <button
               class="uk-button uk-button-default uk-modal-close"
@@ -52,7 +58,6 @@
             >
               CLOSE
             </button>
-            
           </p>
         </div>
       </div>

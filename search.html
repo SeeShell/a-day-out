@@ -31,27 +31,33 @@
         </ul>
       </div>
     </nav>
-
+    
     <div class="uk-container">
       <div
         class="uk-card uk-card-default uk-card-body uk-width-1-2@m"
         id="flash-card"
       ></div>
-      <button
-        class="uk-button uk-button-default"
-        type="button"
-        uk-toggle="target: #offcanvas-flip"
-        id="flash-card-button"
-      >
-        FLIP!
-      </button>
+      <!-- This is an anchor toggling the modal -->
+      <a href="#modal-flash-card" id="flash-card-button" uk-toggle>FLIP</a>
 
-      <div id="offcanvas-flip" uk-offcanvas="flip: true; overlay: true">
-        <div class="uk-offcanvas-bar">
-          <button class="uk-offcanvas-close" type="button" uk-close></button>
+      <!-- This is the modal -->
+      <div id="modal-flash-card" uk-modal>
+        <div class="uk-modal-dialog uk-modal-body" >
+          <div id="flash-card-div"></div>
+          
+          <p class="uk-text-right">
+            <button
+              class="uk-button uk-button-default uk-modal-close"
+              type="button"
+            >
+              CLOSE
+            </button>
+            
+          </p>
         </div>
       </div>
     </div>
+
     <footer class="uk-section-muted uk-padding uk-position-bottom">
       <p class="uk-text-center uk-text-small uk-text-light">
         &copy; Sims, Mountain, Burrell 2020

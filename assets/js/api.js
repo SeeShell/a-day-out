@@ -24,7 +24,7 @@ $(function() {
   });
 
   //onclick GET ART------------
-  $("#go-button").on("click", function(event) {
+  $("#go-button").on("click", function() {
     if (region1 !== "" && region2 !== "") {
       window.location.href = "project.html";
       localStorage.removeItem("objectID1");

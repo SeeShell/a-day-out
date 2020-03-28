@@ -5,6 +5,7 @@ if (region1 === null || region2 === null) {
   window.location.href = "index.html";
 }
 
+var objectIDsArray = []
 
 $(function() {
   var queryURL1 =
@@ -108,6 +109,8 @@ $(function() {
         $("#dimensions1").append(dimensions);
         $("#object1-met-page").attr("href",metLink);
         $("#userChoice1").append(region1);
+        objectIDsArray.push(response.objectID)
+        localStorage.setItem("objectIDsArray",objectIDsArray); 
       }
     });
   }
@@ -168,18 +171,11 @@ $(function() {
         $("#dimensions2").append(dimensions);
         $("#object2-met-page").attr("href",metLink);
         $("#userChoice2").append(region2);
+        objectIDsArray.push(response.objectID);
+        localStorage.setItem("objectIDsArray",objectIDsArray); 
       }
     });
   }
-
-  //put object IDs in array for local storage
-  var objectIDsArray = []
-  var quizID1 = localStorage.getItem("objectID1");
-  var quizID2 = localStorage.getItem("objectID2");
-  objectIDsArray.push(quizID1);
-  objectIDsArray.push(quizID2);
-  localStorage.setItem("objectIDsArray",objectIDsArray); 
-  
 });
  
 

@@ -15,6 +15,8 @@ $(function() {
     "https://collectionapi.metmuseum.org/public/collection/v1/search?geoLocation=" +
     region2 +
     "&q=statue&medium=Sculpture";
+  
+    var objectIDsArray = []
 
   //ART SPOT #1
   $.ajax({
@@ -22,17 +24,17 @@ $(function() {
     method: "GET"
   }).then(function(response1) {
     var objectID1 = localStorage.getItem("objectID1");
-    
+
     if (objectID1===null) {
     var objectIDArray1 = response1.objectIDs;
     var randObjectID1 =
       objectIDArray1[Math.floor(Math.random() * objectIDArray1.length)];
-     localStorage.setItem("objectID1",randObjectID1);
+      localStorage.setItem("objectID1",randObjectID1);
     }
     //out of random objects fitting criteria call function
     renderArt1(randObjectID1, objectID1);
   });
-
+  
   //ART SPOT #2
   $.ajax({
     url: queryURL2,
@@ -44,12 +46,13 @@ $(function() {
     var objectIDArray2 = response2.objectIDs;
     var randObjectID2 =
       objectIDArray2[Math.floor(Math.random() * objectIDArray2.length)];
-     localStorage.setItem("objectID2",randObjectID2);
+      localStorage.setItem("objectID2",randObjectID2);
     }
     //out of random objects fitting criteria call function
     renderArt2(randObjectID2, objectID2);
   });
 
+  
   // get art from objectID ART #1
   function renderArt1(randObjectID1, objectID1) {
   if (randObjectID1 == null){
@@ -106,6 +109,9 @@ $(function() {
         $("#dimensions1").append(dimensions);
         $("#object1-met-page").attr("href",metLink);
         $("#userChoice1").append(region1);
+        //put in array
+        objectIDsArray.push(response.objectID);
+        localStorage.setItem("objectIDsArray",JSON.stringify(objectIDsArray)); 
       }
     });
   }
@@ -121,6 +127,7 @@ $(function() {
         "https://collectionapi.metmuseum.org/public/collection/v1/objects/" +
         randObjectID2;
       }
+
     $.ajax({
       url: queryURL,
       method: "GET"
@@ -165,10 +172,14 @@ $(function() {
         $("#dimensions2").append(dimensions);
         $("#object2-met-page").attr("href",metLink);
         $("#userChoice2").append(region2);
+        //put in array
+        objectIDsArray.push(response.objectID);
+        localStorage.setItem("objectIDsArray",JSON.stringify(objectIDsArray)); 
       }
     });
   }
 });
+ 
 
 //---------- Projects functions ------------------------------
 // Questions and projects render and refresh

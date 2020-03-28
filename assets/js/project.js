@@ -104,6 +104,7 @@ $(function() {
         $("#date1").append(date);
         $("#dimensions1").append(dimensions);
         $("#object1-met-page").attr("href",metLink);
+        $("#userChoice1").append(region1);
       }
     });
   }
@@ -161,6 +162,7 @@ $(function() {
         $("#medium2").append(medium);
         $("#dimensions2").append(dimensions);
         $("#object2-met-page").attr("href",metLink);
+        $("#userChoice2").append(region2);
       }
     });
   }
@@ -330,12 +332,10 @@ function renderRecipe(randRecipe, recipeDiv){
     //get recipes title, image, and link
     var recipeTitle = $("<p>").text(randRecipe.recipe.label);
     var recipeImage = $("<img>").attr('src',randRecipe.recipe.image);
-    var recipeHealth= $("<p>").text(randRecipe.recipe.healthLabels);
     var recipeURL = $("<a>").attr("href", randRecipe.recipe.url).text("See Full Recipe");
     
     $(recipeDiv).append(recipeTitle);
     $(recipeDiv).append(recipeImage);
     $(recipeDiv).append(recipeURL);
-    $(recipeDiv).append(recipeHealth);
 
   };

@@ -1,14 +1,6 @@
-var region1 = localStorage.getItem("region1");
-var region2 = localStorage.getItem("region2");
+// var objectIDsArray = localStorage.getItem("objectIDsArray");
 
-var objectID1 = localStorage.getItem("objectID1");
-var objectID2 = localStorage.getItem("objectID2");
-
-var objectIDArray = []
-objectIDArray.push(objectID1);
-objectIDArray.push(objectID2);
-
-var randObjectID = objectIDArray[Math.floor(Math.random() * objectIDArray.length)];
+// var randObjectID = objectIDsArray[Math.floor(Math.random() * objectIDsArray.length)];
 
 renderQuizImage(randObjectID);
 
@@ -23,8 +15,9 @@ function renderQuizImage (randObjectID) {
       }).then(function(response) {
  
         var imageUrl = response.primaryImageSmall;
-        console.log(imageUrl)
-        $("#flash-card").attr("src", imageUrl);
+      
+        var quizImage = $("<img>").attr("src", imageUrl);
+        $("#flash-card").append(quizImage);
 
 
         // var artist = response.artistDisplayName;

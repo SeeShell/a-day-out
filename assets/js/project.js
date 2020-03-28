@@ -15,6 +15,7 @@ $(function() {
     "https://collectionapi.metmuseum.org/public/collection/v1/search?geoLocation=" +
     region2 +
     "&q=statue&medium=Sculpture";
+  
 
   //ART SPOT #1
   $.ajax({
@@ -22,17 +23,17 @@ $(function() {
     method: "GET"
   }).then(function(response1) {
     var objectID1 = localStorage.getItem("objectID1");
-    
+
     if (objectID1===null) {
     var objectIDArray1 = response1.objectIDs;
     var randObjectID1 =
       objectIDArray1[Math.floor(Math.random() * objectIDArray1.length)];
-     localStorage.setItem("objectID1",randObjectID1);
+      localStorage.setItem("objectID1",randObjectID1);
     }
     //out of random objects fitting criteria call function
     renderArt1(randObjectID1, objectID1);
   });
-
+  
   //ART SPOT #2
   $.ajax({
     url: queryURL2,
@@ -44,12 +45,13 @@ $(function() {
     var objectIDArray2 = response2.objectIDs;
     var randObjectID2 =
       objectIDArray2[Math.floor(Math.random() * objectIDArray2.length)];
-     localStorage.setItem("objectID2",randObjectID2);
+      localStorage.setItem("objectID2",randObjectID2);
     }
     //out of random objects fitting criteria call function
     renderArt2(randObjectID2, objectID2);
   });
 
+  
   // get art from objectID ART #1
   function renderArt1(randObjectID1, objectID1) {
   if (randObjectID1 == null){
@@ -121,6 +123,7 @@ $(function() {
         "https://collectionapi.metmuseum.org/public/collection/v1/objects/" +
         randObjectID2;
       }
+
     $.ajax({
       url: queryURL,
       method: "GET"
@@ -168,7 +171,17 @@ $(function() {
       }
     });
   }
+
+  //put object IDs in array for local storage
+  var objectIDsArray = []
+  var quizID1 = localStorage.getItem("objectID1");
+  var quizID2 = localStorage.getItem("objectID2");
+  objectIDsArray.push(quizID1);
+  objectIDsArray.push(quizID2);
+  localStorage.setItem("objectIDsArray",objectIDsArray); 
+  
 });
+ 
 
 //---------- Projects functions ------------------------------
 // Questions and projects render and refresh

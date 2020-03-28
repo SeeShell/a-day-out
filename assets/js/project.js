@@ -81,7 +81,6 @@ $(function() {
       var metLink = response.objectURL;
   
       if (artist === "") {
-        artist.text;
         $("#artist1").text("Unknown");
       }
       if (title === "") {
@@ -144,7 +143,6 @@ $(function() {
       var metLink = response.objectURL
 
       if (artist === "") {
-        artist.text;
         $("#artist2").text("Unknown");
       }
       if (title === "") {

@@ -4,9 +4,10 @@ $(function() {
   var region1 = "";
   var region2 = "";
   //onclick for REGIONS-------------
-  $("a").on("click", function(event) {
+  $(".location-button").on("click", function(event) {
     event.preventDefault();
     // var firstRegionSelected = false;
+    console.log(this);
     if (firstRegionSelected) {
       region2 = $(this)[0].id;
       renderRegions(region2);

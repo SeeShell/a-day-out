@@ -5,7 +5,6 @@ if (region1 === null || region2 === null) {
   window.location.href = "index.html";
 }
 
-var objectIDsArray = []
 
 $(function() {
   var queryURL1 =
@@ -52,7 +51,8 @@ $(function() {
     renderArt2(randObjectID2, objectID2);
   });
 
-  
+  var objectIDsArray = []
+  console.log(objectIDsArray)
   // get art from objectID ART #1
   function renderArt1(randObjectID1, objectID1) {
   if (randObjectID1 == null){
@@ -109,6 +109,7 @@ $(function() {
         $("#dimensions1").append(dimensions);
         $("#object1-met-page").attr("href",metLink);
         $("#userChoice1").append(region1);
+        //put in array 
         objectIDsArray.push(response.objectID)
         localStorage.setItem("objectIDsArray",objectIDsArray); 
       }
@@ -171,6 +172,7 @@ $(function() {
         $("#dimensions2").append(dimensions);
         $("#object2-met-page").attr("href",metLink);
         $("#userChoice2").append(region2);
+        //put in array
         objectIDsArray.push(response.objectID);
         localStorage.setItem("objectIDsArray",objectIDsArray); 
       }

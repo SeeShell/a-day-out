@@ -15,6 +15,11 @@
   </head>
   <body>
     <nav class="uk-navbar uk-navbar-container uk-margin">
+      <div class="uk-navbar-left">
+        <a class="uk-link-muted uk-margin-left uk-margin-right" href="index.html"
+          >A DAY OUT</a
+        >
+      </div>
       <div class="uk-navbar-right">
         <a
           class="uk-navbar-toggle"
@@ -74,7 +79,7 @@
           ></span
           >FLIP</a
         >
-        <p class="uk-text-light uk-align-right">
+        <p class="uk-text-light uk-align-right" id="next-card">
           NEXT CARD<span
             class="uk-icon-link uk-margin-small-right"
             uk-icon="chevron-right"
@@ -98,17 +103,13 @@
       </div>
       <hr />
       <div>
-        <p class="uk-text-muted">
+        <p class="uk-text-muted" id="clear-deck">
           <span class="uk-margin-small-right" uk-icon="trash"></span>CLEAR DECK
         </p>
       </div>
     </div>
-<!-- 
-    <footer class="uk-section-muted uk-padding uk-position-bottom">
-      <p class="uk-text-center uk-text-small uk-text-light">
-        &copy; Sims, Mountain, Burrell 2020
-      </p>
-    </footer> -->
+
+    
     <!-- JQuery -->
     <script
       src="https://code.jquery.com/jquery-3.4.1.min.js"

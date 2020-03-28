@@ -15,25 +15,48 @@
   <body>
     <nav class="uk-navbar-container uk-margin" uk-navbar="mode: click">
       <div class="uk-navbar-left">
-        <a class="uk-logo uk-margin-left uk-margin-right" href="index.html">A DAY OUT</a>
+        <a class="uk-logo uk-margin-left uk-margin-right" href="index.html"
+          >A DAY OUT</a
+        >
       </div>
       <div class="uk-navbar-right">
-        <a class="uk-navbar-toggle" uk-toggle="target: #offcanvas-nav" uk-navbar-toggle-icon href="#"></a>
-    </div>
+        <a
+          class="uk-navbar-toggle"
+          uk-toggle="target: #offcanvas-nav"
+          uk-navbar-toggle-icon
+          href="#"
+        ></a>
+      </div>
     </nav>
     <div id="offcanvas-nav" uk-offcanvas="overlay: true; flip: true">
-        <div class="uk-offcanvas-bar">
-    
-            <ul class="uk-nav uk-nav-default">
-                <hr>
-                <li class="uk-nav-header">A DAY OUT</li>
-                <li class="uk-nav-divider"></li>
-                <li><a href="index.html"><span class="uk-margin-small-right" uk-icon="icon: table"></span> HOME</a></li>
-                <li><a href="project.html"><span class="uk-margin-small-right" uk-icon="icon: thumbnails"></span> PROJECTS</a></li>
-                <li><a href="search.html"><span class="uk-margin-small-right" uk-icon="icon: album"></span> FLASH CARDS</a></li>
-            </ul>
-    
-        </div>
+      <div class="uk-offcanvas-bar">
+        <ul class="uk-nav uk-nav-default">
+          <hr />
+          <li class="uk-nav-header">A DAY OUT</li>
+          <li class="uk-nav-divider"></li>
+          <li>
+            <a href="index.html"
+              ><span class="uk-margin-small-right" uk-icon="icon: table"></span>
+              HOME</a
+            >
+          </li>
+          <li>
+            <a href="project.html"
+              ><span
+                class="uk-margin-small-right"
+                uk-icon="icon: thumbnails"
+              ></span>
+              PROJECTS</a
+            >
+          </li>
+          <li>
+            <a href="search.html"
+              ><span class="uk-margin-small-right" uk-icon="icon: album"></span>
+              FLASH CARDS</a
+            >
+          </li>
+        </ul>
+      </div>
     </div>
 
     <div class="uk-container uk-margin">
@@ -86,9 +109,7 @@
           uk-marker
           id="Africa"
         ></a>
-        <div
-          class="uk-container"
-        >
+        <div class="uk-container">
           <!-- <div>
             <p class="uk-margin-remove-bottom uk-text-lighter">
               Region 1:
@@ -117,9 +138,11 @@
           </div>
           <div class="uk-align-right uk-text-lighter" id="go-button">
             <p>
-                GO
-                <span class="uk-margin-small-leftt" uk-icon="chevron-right"></span
-                >
+              GO
+              <span
+                class="uk-margin-small-leftt"
+                uk-icon="chevron-right"
+              ></span>
             </p>
           </div>
         </div>
@@ -132,28 +155,51 @@
     </div> -->
     <div class="uk-container uk-margin">
       <p class="uk-text-light">
-        Choose two regions above to compare objects from the Metropolitan Museum of Art. 
-        Questions to ask yourself about the artworks and a project idea will follow!
+        Choose two regions above to compare objects from the Metropolitan Museum
+        of Art. Questions to ask yourself about the artworks and a project idea
+        will follow!
       </p>
     </div>
-      <div class="uk-container uk-margin">
-          <a class="uk-button uk-button-default uk-text-lighter" href="#modal-overflow" uk-toggle>More about this app</a>
-          <div id="modal-overflow" uk-modal>
-            <div class="uk-modal-dialog ">
-                <div class="uk-modal-body" uk-overflow-auto>
-                  <p>Projects:</p>
-                  <p>When you choose two regions above and press 'GO' objects from those regions are randomly chose from the Metropolitan Museum of Art's sculpture collection.</p>
-                  <p>Images and information about those objects, questions to ask yourself about the artworks, and a project idea will follow.</p>
-                  <p>Recipes from the chosen region are available at the bottom of the project page.</p>
-                  <p>You can refresh the project ideas if they do not suit the objects.</p>
-                    <p>If you want new objects, come back to the homepage and choose regions again.</p>
-                    <hr>
-                    <p>Flash cards:</p>
-                    <p>Recently viewed objects will be stored as flash cards so you can quiz yourself on the object details later.</p>
-                    <p>Clear the deck to remove all cards.</p>
-              </div>
-            
+    <div class="uk-container uk-margin">
+      <a
+        class="uk-button uk-button-default uk-text-lighter"
+        href="#modal-overflow"
+        uk-toggle
+        >More about this app</a
+      >
+      <div id="modal-overflow" uk-modal>
+        <div class="uk-modal-dialog ">
+          <div class="uk-modal-body" uk-overflow-auto>
+            <p>Projects:</p>
+            <p>
+              When you choose two regions above and press 'GO' objects from
+              those regions are randomly chose from the Metropolitan Museum of
+              Art's sculpture collection.
+            </p>
+            <p>
+              Images and information about those objects, questions to ask
+              yourself about the artworks, and a project idea will follow.
+            </p>
+            <p>
+              Recipes from the chosen region are available at the bottom of the
+              project page.
+            </p>
+            <p>
+              You can refresh the project ideas if they do not suit the objects.
+            </p>
+            <p>
+              If you want new objects, come back to the homepage and choose
+              regions again.
+            </p>
+            <hr />
+            <p>Flash cards:</p>
+            <p>
+              Recently viewed objects will be stored as flash cards so you can
+              quiz yourself on the object details later.
+            </p>
+            <p>Clear the deck to remove all cards.</p>
           </div>
+        </div>
       </div>
     </div>
 

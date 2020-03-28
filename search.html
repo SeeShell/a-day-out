@@ -16,24 +16,45 @@
   <body>
     <nav class="uk-navbar uk-navbar-container uk-margin">
       <div class="uk-navbar-right">
-          <a class="uk-navbar-toggle" uk-toggle="target: #offcanvas-nav" uk-navbar-toggle-icon href="#"></a>
+        <a
+          class="uk-navbar-toggle"
+          uk-toggle="target: #offcanvas-nav"
+          uk-navbar-toggle-icon
+          href="#"
+        ></a>
       </div>
-  </nav>
-  
-  <div id="offcanvas-nav" uk-offcanvas="overlay: true; flip: true">
-    <div class="uk-offcanvas-bar">
+    </nav>
 
+    <div id="offcanvas-nav" uk-offcanvas="overlay: true; flip: true">
+      <div class="uk-offcanvas-bar">
         <ul class="uk-nav uk-nav-default">
-            <hr>
-            <li class="uk-nav-header">A DAY OUT</li>
-            <li class="uk-nav-divider"></li>
-            <li><a href="index.html"><span class="uk-margin-small-right" uk-icon="icon: table"></span> HOME</a></li>
-            <li><a href="project.html"><span class="uk-margin-small-right" uk-icon="icon: thumbnails"></span> PROJECTS</a></li>
-            <li><a href="search.html"><span class="uk-margin-small-right" uk-icon="icon: album"></span> FLASH CARDS</a></li>
+          <hr />
+          <li class="uk-nav-header">A DAY OUT</li>
+          <li class="uk-nav-divider"></li>
+          <li>
+            <a href="index.html"
+              ><span class="uk-margin-small-right" uk-icon="icon: table"></span>
+              HOME</a
+            >
+          </li>
+          <li>
+            <a href="project.html"
+              ><span
+                class="uk-margin-small-right"
+                uk-icon="icon: thumbnails"
+              ></span>
+              PROJECTS</a
+            >
+          </li>
+          <li>
+            <a href="search.html"
+              ><span class="uk-margin-small-right" uk-icon="icon: album"></span>
+              FLASH CARDS</a
+            >
+          </li>
         </ul>
-
+      </div>
     </div>
-</div>
 
     <div class="uk-container">
       <div
@@ -42,13 +63,24 @@
       ></div>
       <!-- This is an anchor toggling the modal -->
       <div>
-      <a href="#modal-flash-card" id="flash-card-button" class="uk-link-muted" uk-toggle
-        ><span class="uk-icon-link uk-margin-small-right" uk-icon="reply"></span
-        >FLIP</a
-      >
-        <p class="uk-text-light uk-align-right">NEXT CARD<span class="uk-icon-link uk-margin-small-right" uk-icon="chevron-right"></span
-          ></p>
-    </div>
+        <a
+          href="#modal-flash-card"
+          id="flash-card-button"
+          class="uk-link-muted"
+          uk-toggle
+          ><span
+            class="uk-icon-link uk-margin-small-right"
+            uk-icon="reply"
+          ></span
+          >FLIP</a
+        >
+        <p class="uk-text-light uk-align-right">
+          NEXT CARD<span
+            class="uk-icon-link uk-margin-small-right"
+            uk-icon="chevron-right"
+          ></span>
+        </p>
+      </div>
       <!-- This is the modal -->
       <div id="modal-flash-card" uk-modal>
         <div class="uk-modal-dialog uk-modal-body">
@@ -64,9 +96,11 @@
           </p>
         </div>
       </div>
-      <hr>
+      <hr />
       <div>
-        <p class="uk-text-muted"><span class="uk-margin-small-right" uk-icon="trash"></span>CLEAR DECK</p>
+        <p class="uk-text-muted">
+          <span class="uk-margin-small-right" uk-icon="trash"></span>CLEAR DECK
+        </p>
       </div>
     </div>
 
@@ -75,11 +109,18 @@
         &copy; Sims, Mountain, Burrell 2020
       </p>
     </footer>
+    <!-- JQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
     <!-- UIkit JS -->
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.3.7/dist/js/uikit.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.3.7/dist/js/uikit-icons.min.js"></script>
     <!--Our JS-->
     <script src="assets/js/api.js"></script>
     <script src="assets/js/script.js"></script>
+    <script src="assets/js/quiz.js"></script>
   </body>
 </html>

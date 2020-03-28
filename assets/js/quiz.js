@@ -1,4 +1,4 @@
-var objectIDsArray = localStorage.getItem("objectIDsArray");
+var objectIDsArray = JSON.parse(localStorage.getItem("objectIDsArray"));
 console.log(objectIDsArray)
 var randObjectID = objectIDsArray[Math.floor(Math.random() * objectIDsArray.length)];
 console.log(randObjectID)

@@ -16,6 +16,7 @@ $(function() {
     region2 +
     "&q=statue&medium=Sculpture";
   
+    var objectIDsArray = []
 
   //ART SPOT #1
   $.ajax({
@@ -51,8 +52,7 @@ $(function() {
     renderArt2(randObjectID2, objectID2);
   });
 
-  var objectIDsArray = []
-  console.log(objectIDsArray)
+  
   // get art from objectID ART #1
   function renderArt1(randObjectID1, objectID1) {
   if (randObjectID1 == null){
@@ -109,9 +109,9 @@ $(function() {
         $("#dimensions1").append(dimensions);
         $("#object1-met-page").attr("href",metLink);
         $("#userChoice1").append(region1);
-        //put in array 
-        objectIDsArray.push(response.objectID)
-        localStorage.setItem("objectIDsArray",objectIDsArray); 
+        //put in array
+        objectIDsArray.push(response.objectID);
+        localStorage.setItem("objectIDsArray",JSON.stringify(objectIDsArray)); 
       }
     });
   }
@@ -174,7 +174,7 @@ $(function() {
         $("#userChoice2").append(region2);
         //put in array
         objectIDsArray.push(response.objectID);
-        localStorage.setItem("objectIDsArray",objectIDsArray); 
+        localStorage.setItem("objectIDsArray",JSON.stringify(objectIDsArray)); 
       }
     });
   }

@@ -41,11 +41,14 @@
         id="flash-card"
       ></div>
       <!-- This is an anchor toggling the modal -->
-      <a href="#modal-flash-card" id="flash-card-button" uk-toggle
+      <div>
+      <a href="#modal-flash-card" id="flash-card-button" class="uk-link-muted" uk-toggle
         ><span class="uk-icon-link uk-margin-small-right" uk-icon="reply"></span
         >FLIP</a
       >
-
+        <p class="uk-text-light uk-align-right">NEXT CARD<span class="uk-icon-link uk-margin-small-right" uk-icon="chevron-right"></span
+          ></p>
+    </div>
       <!-- This is the modal -->
       <div id="modal-flash-card" uk-modal>
         <div class="uk-modal-dialog uk-modal-body">
@@ -60,6 +63,10 @@
             </button>
           </p>
         </div>
+      </div>
+      <hr>
+      <div>
+        <p class="uk-text-muted"><span class="uk-margin-small-right" uk-icon="trash"></span>CLEAR DECK</p>
       </div>
     </div>
 

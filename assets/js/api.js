@@ -7,7 +7,6 @@ $(function() {
   $(".location-button").on("click", function(event) {
     event.preventDefault();
     // var firstRegionSelected = false;
-    console.log(this);
     if (firstRegionSelected) {
       region2 = $(this)[0].id;
       renderRegions(region2);
@@ -37,8 +36,8 @@ $(function() {
 $("#refresh-regions").on("click", function() {
   $("#first-region").empty();
   $("#second-region").empty();
-  region1= "";
-  region2= "";
+  region1 = "";
+  region2 = "";
   localStorage.setItem("region1", region1);
   localStorage.setItem("region2", region2);
 });

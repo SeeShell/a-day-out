@@ -17,40 +17,72 @@
   <body>
     <nav class="uk-navbar-container uk-margin" uk-navbar="mode: click">
       <div class="uk-navbar-left">
-        <a class="uk-logo uk-margin-left uk-margin-right" href="index.html">A DAY OUT</a>
+        <a class="uk-logo uk-margin-left uk-margin-right" href="index.html"
+          >A DAY OUT</a
+        >
       </div>
       <div class="uk-navbar-right">
-        <a class="uk-navbar-toggle" uk-toggle="target: #offcanvas-nav" uk-navbar-toggle-icon href="#"></a>
-    </div>
+        <a
+          class="uk-navbar-toggle"
+          uk-toggle="target: #offcanvas-nav"
+          uk-navbar-toggle-icon
+          href="#"
+        ></a>
+      </div>
     </nav>
     <div id="offcanvas-nav" uk-offcanvas="overlay: true; flip: true">
-        <div class="uk-offcanvas-bar">
-    
-            <ul class="uk-nav uk-nav-default">
-                <hr>
-                <li class="uk-nav-header">A DAY OUT</li>
-                
-                <li class="uk-nav-divider"></li>
-                <li><a href="index.html"><span class="uk-margin-small-right" uk-icon="icon: table"></span> HOME</a></li>
-                <li><a href="project.html"><span class="uk-margin-small-right" uk-icon="icon: thumbnails"></span> PROJECTS</a></li>
-                <li><a href="search.html"><span class="uk-margin-small-right" uk-icon="icon: album"></span> FLASH CARDS</a></li>
-            </ul>
-    
-        </div>
+      <div class="uk-offcanvas-bar">
+        <ul class="uk-nav uk-nav-default">
+          <hr />
+          <li class="uk-nav-header">A DAY OUT</li>
+
+          <li class="uk-nav-divider"></li>
+          <li>
+            <a href="index.html"
+              ><span class="uk-margin-small-right" uk-icon="icon: table"></span>
+              HOME</a
+            >
+          </li>
+          <li>
+            <a href="project.html"
+              ><span
+                class="uk-margin-small-right"
+                uk-icon="icon: thumbnails"
+              ></span>
+              PROJECTS</a
+            >
+          </li>
+          <li>
+            <a href="search.html"
+              ><span class="uk-margin-small-right" uk-icon="icon: album"></span>
+              FLASH CARDS</a
+            >
+          </li>
+        </ul>
+      </div>
     </div>
 
     <div class="uk-container">
       <div class="uk-child-width-expand@s uk-grid-match" uk-grid>
         <div>
           <div class="uk-card uk-card-default uk-card-body">
-            <a
-              class="uk-link-muted"
-              id="object1-met-page"
-              target="_blank"
-              href=""
-            >
+            
+            <a href="#modal-media-image" uk-toggle>
               <img data-src="" width="" height="" alt="" uk-img id="image1" />
             </a>
+            
+            <div id="modal-media-image" class="uk-flex-top" uk-modal>
+              <div
+                class="uk-modal-dialog uk-width-auto uk-margin-auto-vertical"
+              >
+                <button
+                  class="uk-modal-close-outside"
+                  type="button"
+                  uk-close
+                ></button>
+                <img src="" id="image1-zoom" alt="" />
+              </div>
+            </div>
 
             <p
               class="uk-text-left uk-margin-remove uk-padding-remove uk-text-small"
@@ -82,21 +114,37 @@
             >
               Dimensions: <span id="dimensions1"></span>
             </p>
+            <a
+              class="uk-link-muted uk-text-small"
+              id="object1-met-page"
+              target="_blank"
+              href=""
+              >more info</a
+            >
             <p class="uk-text-left uk-text-small uk-padding-top">
               Chosen region: <span id="userChoice1"></span>
             </p>
           </div>
         </div>
+
+        <!-- Region 2  -->
         <div>
           <div class="uk-card uk-card-default uk-card-body">
-            <a
-              class="uk-link-muted"
-              id="object2-met-page"
-              target="_blank"
-              href=""
+            <a href="#modal-media-image" uk-toggle
               ><img data-src="" width="" height="" alt="" uk-img id="image2"
             /></a>
-
+            <div id="modal-media-image" class="uk-flex-top" uk-modal>
+              <div
+                class="uk-modal-dialog uk-width-auto uk-margin-auto-vertical"
+              >
+                <button
+                  class="uk-modal-close-outside"
+                  type="button"
+                  uk-close
+                ></button>
+                <img src="" id="image2-zoom" alt="" />
+              </div>
+            </div>
             <p
               class="uk-text-left uk-margin-remove uk-padding-remove uk-text-small"
             >
@@ -127,6 +175,13 @@
             >
               Dimensions: <span id="dimensions2"></span>
             </p>
+            <a
+              class="uk-link-muted uk-text-small"
+              id="object2-met-page"
+              target="_blank"
+              href=""
+              >more info</a
+            >
             <p class="uk-text-left uk-text-small uk-padding-top">
               Chosen region: <span id="userChoice2"></span>
             </p>

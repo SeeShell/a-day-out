@@ -330,12 +330,10 @@ function renderRecipe(randRecipe, recipeDiv){
     //get recipes title, image, and link
     var recipeTitle = $("<p>").text(randRecipe.recipe.label);
     var recipeImage = $("<img>").attr('src',randRecipe.recipe.image);
-    var recipeHealth= $("<p>").text(randRecipe.recipe.healthLabels);
     var recipeURL = $("<a>").attr("href", randRecipe.recipe.url).text("See Full Recipe");
     
     $(recipeDiv).append(recipeTitle);
     $(recipeDiv).append(recipeImage);
     $(recipeDiv).append(recipeURL);
-    $(recipeDiv).append(recipeHealth);
 
   };

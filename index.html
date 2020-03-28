@@ -16,23 +16,25 @@
     <nav class="uk-navbar-container uk-margin" uk-navbar="mode: click">
       <div class="uk-navbar-left">
         <a class="uk-logo uk-margin-left uk-margin-right" href="index.html">A DAY OUT</a>
-        <ul class="uk-navbar-nav">
-          <li class="uk-active">
-            <a class="uk-logo" href="index.html">HOME</a>
-          </li>
-          <li class="uk-active">
-            <a href="#">Activities</a>
-            <div class="uk-navbar-dropdown">
-              <ul class="uk-nav uk-navbar-dropdown-nav">
-                <li class="uk-active"><a href="project.html">Projects</a></li>
-                <li class="uk-active"><a href="search.html">Flip Cards</a></li>
-              </ul>
-            </div>
-          </li>
-          <!-- <li><a href="#">Etc</a></li> -->
-        </ul>
       </div>
+      <div class="uk-navbar-right">
+        <a class="uk-navbar-toggle" uk-toggle="target: #offcanvas-nav" uk-navbar-toggle-icon href="#"></a>
+    </div>
     </nav>
+    <div id="offcanvas-nav" uk-offcanvas="overlay: true; flip: true">
+        <div class="uk-offcanvas-bar">
+    
+            <ul class="uk-nav uk-nav-default">
+                <hr>
+                <li class="uk-nav-header">A DAY OUT</li>
+                <li class="uk-nav-divider"></li>
+                <li><a href="index.html"><span class="uk-margin-small-right" uk-icon="icon: table"></span> HOME</a></li>
+                <li><a href="project.html"><span class="uk-margin-small-right" uk-icon="icon: thumbnails"></span> PROJECTS</a></li>
+                <li><a href="search.html"><span class="uk-margin-small-right" uk-icon="icon: album"></span> FLASH CARDS</a></li>
+            </ul>
+    
+        </div>
+    </div>
 
     <div class="uk-container uk-margin">
       <div class="uk-inline uk-dark">
@@ -85,9 +87,9 @@
           id="Africa"
         ></a>
         <div
-          class="uk-container uk-overlay uk-position-bottom uk-padding-remove-bottom"
+          class="uk-container"
         >
-          <div>
+          <!-- <div>
             <p class="uk-margin-remove-bottom uk-text-lighter">
               Region 1:
               <span
@@ -104,13 +106,7 @@
                 id="second-region"
               ></span>
             </p>
-          </div>
-          <div class="uk-text-lighter" id="go-button">
-            <p>
-              <span class="uk-margin-small-right" uk-icon="chevron-right"></span
-              >GO
-            </p>
-          </div>
+          </div> -->
           <div class="uk-align-left uk-text-lighter">
             <span
               uk-icon="icon: refresh"
@@ -118,6 +114,13 @@
               class="uk-margin-small-right"
             ></span
             >Clear choices
+          </div>
+          <div class="uk-align-right uk-text-lighter" id="go-button">
+            <p>
+                GO
+                <span class="uk-margin-small-leftt" uk-icon="chevron-right"></span
+                >
+            </p>
           </div>
         </div>
       </div>
@@ -128,7 +131,7 @@
       
     </div>
     <div class="uk-container uk-margin">
-      <p class="uk-text-lighter">
+      <p class="uk-text-light">
         Compare two objects from the collection of the Metropolitan Museum of
         Art. Choose two regions from the map and press GO. Objects will be
         randomly chosen from the Met's sculpture collections of those regions.
@@ -137,7 +140,7 @@
       </p>
     </div>
 
-    <footer class="uk-section-muted uk-padding">
+    <footer class="uk-section-muted uk-padding uk-position-bottom">
       <p class="uk-text-center uk-text-small uk-text-light">
         &copy; Sims, Mountain, Burrell 2020
       </p>

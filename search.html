@@ -14,26 +14,26 @@
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
-    <nav class="uk-navbar-container uk-margin" uk-navbar="mode: click">
-      <div class="uk-navbar-left">
-        <a class="uk-logo uk-margin-left uk-margin-right" href="index.html">A DAY OUT</a>
-        <ul class="uk-navbar-nav">
-          <li class="uk-active">
-            <a class="uk-logo" href="index.html">HOME</a>
-          </li>
-          <li class="uk-active">
-            <a href="#">Activities</a>
-            <div class="uk-navbar-dropdown">
-              <ul class="uk-nav uk-navbar-dropdown-nav">
-                <li class="uk-active"><a href="project.html">Projects</a></li>
-                <li class="uk-active"><a href="search.html">Flip Cards</a></li>
-              </ul>
-            </div>
-          </li>
-          <!-- <li><a href="#">Etc</a></li> -->
-        </ul>
+    <nav class="uk-navbar uk-navbar-container uk-margin">
+      <div class="uk-navbar-right">
+          <a class="uk-navbar-toggle" uk-toggle="target: #offcanvas-nav" uk-navbar-toggle-icon href="#"></a>
       </div>
-    </nav>
+  </nav>
+  
+  <div id="offcanvas-nav" uk-offcanvas="overlay: true; flip: true">
+    <div class="uk-offcanvas-bar">
+
+        <ul class="uk-nav uk-nav-default">
+            <hr>
+            <li class="uk-nav-header">A DAY OUT</li>
+            <li class="uk-nav-divider"></li>
+            <li><a href="index.html"><span class="uk-margin-small-right" uk-icon="icon: table"></span> HOME</a></li>
+            <li><a href="project.html"><span class="uk-margin-small-right" uk-icon="icon: thumbnails"></span> PROJECTS</a></li>
+            <li><a href="search.html"><span class="uk-margin-small-right" uk-icon="icon: album"></span> FLASH CARDS</a></li>
+        </ul>
+
+    </div>
+</div>
 
     <div class="uk-container">
       <div

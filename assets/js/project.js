@@ -16,7 +16,11 @@ $(function() {
     region2 +
     "&q=statue&medium=Sculpture";
   
-    var objectIDsArray = []
+    var objectIDsArray = JSON.parse(localStorage.getItem("objectIDsArray"));
+    if (objectIDsArray===null){
+      objectIDsArray = [];
+    };
+    
 
   //ART SPOT #1
   $.ajax({

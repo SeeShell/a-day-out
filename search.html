@@ -14,50 +14,103 @@
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
-    <nav class="uk-navbar-container uk-margin" uk-navbar="mode: click">
-      <div class="uk-navbar-left">
-        <ul class="uk-navbar-nav">
-          <li class="uk-active"><a href="index.html">Home</a></li>
-          <li>
-            <a href="#">Activities</a>
-            <div class="uk-navbar-dropdown">
-              <ul class="uk-nav uk-navbar-dropdown-nav">
-                <li class="uk-active"><a href="project.html">Projects</a></li>
-                <li class="uk-active"><a href="search.html">Search</a></li>
-              </ul>
-            </div>
-          </li>
-          <li><a href="#">Etc</a></li>
-        </ul>
+    <nav class="uk-navbar uk-navbar-container uk-margin">
+      <div class="uk-navbar-right">
+        <a
+          class="uk-navbar-toggle"
+          uk-toggle="target: #offcanvas-nav"
+          uk-navbar-toggle-icon
+          href="#"
+        ></a>
       </div>
     </nav>
 
-    <div
-      class="uk-card uk-card-default uk-card-body uk-width-1-2@m"
-      id="flash-card"
-    ></div>
-    <button
-      class="uk-button uk-button-default"
-      type="button"
-      uk-toggle="target: #offcanvas-flip"
-      id="flash-card-button"
-    >
-      FLIP!
-    </button>
-
-    <div id="offcanvas-flip" uk-offcanvas="flip: true; overlay: true">
+    <div id="offcanvas-nav" uk-offcanvas="overlay: true; flip: true">
       <div class="uk-offcanvas-bar">
-        <button class="uk-offcanvas-close" type="button" uk-close></button>
+        <ul class="uk-nav uk-nav-default">
+          <hr />
+          <li class="uk-nav-header">A DAY OUT</li>
+          <li class="uk-nav-divider"></li>
+          <li>
+            <a href="index.html"
+              ><span class="uk-margin-small-right" uk-icon="icon: table"></span>
+              HOME</a
+            >
+          </li>
+          <li>
+            <a href="project.html"
+              ><span
+                class="uk-margin-small-right"
+                uk-icon="icon: thumbnails"
+              ></span>
+              PROJECTS</a
+            >
+          </li>
+          <li>
+            <a href="search.html"
+              ><span class="uk-margin-small-right" uk-icon="icon: album"></span>
+              FLASH CARDS</a
+            >
+          </li>
+        </ul>
       </div>
     </div>
 
-    <footer class="uk-section-muted uk-padding">
+    <div class="uk-container">
+      <div
+        class="uk-card uk-card-default uk-card-body uk-width-1-2@m"
+        id="flash-card"
+      ></div>
+      <!-- This is an anchor toggling the modal -->
+      <div>
+        <a
+          href="#modal-flash-card"
+          id="flash-card-button"
+          class="uk-link-muted"
+          uk-toggle
+          ><span
+            class="uk-icon-link uk-margin-small-right"
+            uk-icon="reply"
+          ></span
+          >FLIP</a
+        >
+        <p class="uk-text-light uk-align-right">
+          NEXT CARD<span
+            class="uk-icon-link uk-margin-small-right"
+            uk-icon="chevron-right"
+          ></span>
+        </p>
+      </div>
+      <!-- This is the modal -->
+      <div id="modal-flash-card" uk-modal>
+        <div class="uk-modal-dialog uk-modal-body">
+          <div id="flash-card-div"></div>
+
+          <p class="uk-text-right">
+            <button
+              class="uk-button uk-button-default uk-modal-close"
+              type="button"
+            >
+              CLOSE
+            </button>
+          </p>
+        </div>
+      </div>
+      <hr />
+      <div>
+        <p class="uk-text-muted">
+          <span class="uk-margin-small-right" uk-icon="trash"></span>CLEAR DECK
+        </p>
+      </div>
+    </div>
+
+    <footer class="uk-section-muted uk-padding uk-position-bottom">
       <p class="uk-text-center uk-text-small uk-text-light">
         &copy; Sims, Mountain, Burrell 2020
       </p>
     </footer>
-      <!-- JQuery -->
-      <script
+    <!-- JQuery -->
+    <script
       src="https://code.jquery.com/jquery-3.4.1.min.js"
       integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
       crossorigin="anonymous"

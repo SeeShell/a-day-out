@@ -1,84 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>A DAY OUT</title>
 
     <!-- UIkit CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.3.7/dist/css/uikit.min.css" />
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
-    
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/uikit@3.3.7/dist/css/uikit.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
     <nav class="uk-navbar-container uk-margin" uk-navbar="mode: click">
-        <div class="uk-navbar-left">
-    
-            <ul class="uk-navbar-nav">
-                <li class="uk-active"><a href="index.html">Home</a></li>
-                <li>
-                    <a href="#">Activities</a>
-                    <div class="uk-navbar-dropdown">
-                        <ul class="uk-nav uk-navbar-dropdown-nav">
-                            <li class="uk-active"><a href="project.html">Projects</a></li>
-                            <!-- <li class="uk-active"><a href="search.html">Search</a></li> -->
-                        </ul>
-                    </div>
-                </li>
-                <!-- <li><a href="#">Etc</a></li> -->
-            </ul>
-    
-        </div>
+      <div class="uk-navbar-left">
+        <a class="uk-logo uk-margin-left uk-margin-right" href="index.html"
+          >A DAY OUT</a
+        >
+      </div>
+      <div class="uk-navbar-right">
+        <a
+          class="uk-navbar-toggle"
+          uk-toggle="target: #offcanvas-nav"
+          uk-navbar-toggle-icon
+          href="#"
+        ></a>
+      </div>
     </nav>
-
-    <div class="uk-container">
-        <h1 class="uk-heading-small">A Day Out</h1>
-        <p class="uk-text-normal">...but in</p>
-        <hr>
-    <!-- </div> -->
-    
-    <!-- <div class="uk-container"> -->
-        <p class="uk-text-lighter">
-            Compare two objects from the collection of the Metropolitan Museum of Art. Choose two regions from the map and press GO.
-            Objects will be randomly chosen from the Met's sculpture collections of those regions. 
-            Questions to consider about the artworks about the artworks and a project idea will be presented.
-        </p>
+    <div id="offcanvas-nav" uk-offcanvas="overlay: true; flip: true">
+      <div class="uk-offcanvas-bar">
+        <ul class="uk-nav uk-nav-default">
+          <hr />
+          <li class="uk-nav-header">A DAY OUT</li>
+          <li class="uk-nav-divider"></li>
+          <li>
+            <a href="index.html"
+              ><span class="uk-margin-small-right" uk-icon="icon: table"></span>
+              HOME</a
+            >
+          </li>
+          <li>
+            <a href="project.html"
+              ><span
+                class="uk-margin-small-right"
+                uk-icon="icon: thumbnails"
+              ></span>
+              PROJECTS</a
+            >
+          </li>
+          <li>
+            <a href="search.html"
+              ><span class="uk-margin-small-right" uk-icon="icon: album"></span>
+              FLASH CARDS</a
+            >
+          </li>
+        </ul>
+      </div>
     </div>
 
     <div class="uk-container uk-margin">
-        <div class="uk-inline uk-dark">
-            <img src="https://i.pinimg.com/originals/0e/0d/70/0e0d70509fe4f2c140b987c9a823d787.png" width="1800" height="1200" alt="">
-            <a class="uk-position-absolute uk-transform-center location-button" style="left: 13%; top: 30%" href="#" uk-marker id="North and Central America"></a>
-            <a class="uk-position-absolute uk-transform-center location-button" style="left: 25%; top: 65%" href="#" uk-marker id="South America"></a>
-            <a class="uk-position-absolute uk-transform-center location-button" style="left: 50%; top: 22%" href="#" uk-marker id="Europe"></a>
-            <a class="uk-position-absolute uk-transform-center location-button" style="left: 75%; top: 35%" href="#" uk-marker id="Asia"></a>
-            <a class="uk-position-absolute uk-transform-center location-button" style="left: 70%; top: 40%" href="#" uk-marker id="India"></a>
-            <a class="uk-position-absolute uk-transform-center location-button" style="left: 50%; top: 50%" href="#" uk-marker id="Africa"></a>
+      <div class="uk-inline uk-dark">
+        <img
+          src="https://i.pinimg.com/originals/0e/0d/70/0e0d70509fe4f2c140b987c9a823d787.png"
+          width="1800"
+          height="1200"
+          alt=""
+        />
+        <a
+          class="uk-position-absolute uk-transform-center location-button"
+          style="left: 13%; top: 30%"
+          href="#"
+          uk-marker
+          id="North and Central America"
+        ></a>
+        <a
+          class="uk-position-absolute uk-transform-center location-button"
+          style="left: 25%; top: 65%"
+          href="#"
+          uk-marker
+          id="South America"
+        ></a>
+        <a
+          class="uk-position-absolute uk-transform-center location-button"
+          style="left: 50%; top: 22%"
+          href="#"
+          uk-marker
+          id="Europe"
+        ></a>
+        <a
+          class="uk-position-absolute uk-transform-center location-button"
+          style="left: 75%; top: 35%"
+          href="#"
+          uk-marker
+          id="Asia"
+        ></a>
+        <a
+          class="uk-position-absolute uk-transform-center location-button"
+          style="left: 70%; top: 40%"
+          href="#"
+          uk-marker
+          id="India"
+        ></a>
+        <a
+          class="uk-position-absolute uk-transform-center location-button"
+          style="left: 50%; top: 50%"
+          href="#"
+          uk-marker
+          id="Africa"
+        ></a>
+        <div class="uk-container">
+          <!-- <div>
+            <p class="uk-margin-remove-bottom uk-text-lighter">
+              Region 1:
+              <span
+                class="uk-text-normal uk-text-uppercase"
+                id="first-region"
+              ></span>
+            </p>
+            <p
+              class="uk-margin-remove-bottom uk-margin-remove-top uk-text-lighter"
+            >
+              Region 2:
+              <span
+                class="uk-text-normal uk-text-uppercase"
+                id="second-region"
+              ></span>
+            </p>
+          </div> -->
+          <div class="uk-align-left uk-text-lighter">
+            <span
+              uk-icon="icon: refresh"
+              id="refresh-regions"
+              class="uk-margin-small-right"
+            ></span
+            >Clear choices
+          </div>
+          <div class="uk-align-right uk-text-lighter" id="go-button">
+            <p>
+              GO
+              <span
+                class="uk-margin-small-leftt"
+                uk-icon="chevron-right"
+              ></span>
+            </p>
+          </div>
         </div>
+      </div>
     </div>
 
-    <div class="uk-container uk-margin-bottom">
-        <div>
-            <p class="uk-margin-remove-bottom uk-text-lighter">Region 1: <span class="uk-text-normal uk-text-uppercase" id="first-region"></span> </p>      
-            <p class="uk-margin-remove-bottom uk-margin-remove-top uk-text-lighter">Region 2: <span class="uk-text-normal uk-text-uppercase" id="second-region"></span></p>
-        </div>
-        <div class="uk-text-lighter">
-            <button class="uk-button uk-button-default" id="go-button">GO!</button>
-        </div>
-        <div class="uk-align-left" id="refresh-regions" uk-icon="icon: refresh"></div>    
+    <!-- <div class="uk-container">
+      <p class="uk-text-lead">A Day Out<span class="uk-text-small">...but in</span></p>
+      
+    </div> -->
+    <div class="uk-container uk-margin">
+      <p class="uk-text-light">
+        Choose two regions above to compare objects from the Metropolitan Museum
+        of Art. Questions to ask yourself about the artworks and a project idea
+        will follow!
+      </p>
     </div>
-   
-    
-    <footer class="uk-section-muted uk-padding">
-        <p class="uk-text-center uk-text-small uk-text-light">&copy; Sims, Mountain, Burrell 2020</p>
+    <div class="uk-container uk-margin">
+      <a
+        class="uk-button uk-button-default uk-text-lighter"
+        href="#modal-overflow"
+        uk-toggle
+        >More about this app</a
+      >
+      <div id="modal-overflow" uk-modal>
+        <div class="uk-modal-dialog ">
+          <div class="uk-modal-body" uk-overflow-auto>
+            <p>Projects:</p>
+            <p>
+              When you choose two regions above and press 'GO' objects from
+              those regions are randomly chose from the Metropolitan Museum of
+              Art's sculpture collection.
+            </p>
+            <p>
+              Images and information about those objects, questions to ask
+              yourself about the artworks, and a project idea will follow.
+            </p>
+            <p>
+              Recipes from the chosen region are available at the bottom of the
+              project page.
+            </p>
+            <p>
+              You can refresh the project ideas if they do not suit the objects.
+            </p>
+            <p>
+              If you want new objects, come back to the homepage and choose
+              regions again.
+            </p>
+            <hr />
+            <p>Flash cards:</p>
+            <p>
+              Recently viewed objects will be stored as flash cards so you can
+              quiz yourself on the object details later.
+            </p>
+            <p>Clear the deck to remove all cards.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="uk-section-muted uk-padding uk-position-bottom">
+      <p class="uk-text-center uk-text-small uk-text-light">
+        &copy; Sims, Mountain, Burrell 2020
+      </p>
     </footer>
-<!-- JQuery -->
-<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-<!-- UIkit JS -->
-<script src="https://cdn.jsdelivr.net/npm/uikit@3.3.7/dist/js/uikit.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/uikit@3.3.7/dist/js/uikit-icons.min.js"></script>
-<!--Our JS-->
-<script src ="assets/js/api.js"></script>
-<script src ="assets/js/script.js"></script>
-</body>
+    <!-- JQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.3.7/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.3.7/dist/js/uikit-icons.min.js"></script>
+    <!--Our JS-->
+    <script src="assets/js/api.js"></script>
+    <script src="assets/js/script.js"></script>
+  </body>
 </html>

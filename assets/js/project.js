@@ -97,6 +97,7 @@ $(function() {
         $("#dimension1").text("Unknown");
       } else {
         $("#image1").attr("src", imageUrl);
+        $("#image1-zoom").attr("src", imageUrl);
         $("#artist1").append(artist);
         $("#title1").append(title);
         $("#region1").append(country);
@@ -155,6 +156,7 @@ $(function() {
         $("#dimension2").text("Unknown");
       } else {
         $("#image2").attr("src", imageUrl);
+        $("#image2-zoom").attr("src", imageUrl);
         $("#artist2").append(artist);
         $("#title2").append(title);
         $("#region2").append(country);

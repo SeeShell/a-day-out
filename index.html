@@ -15,7 +15,9 @@
   <body>
     <nav class="uk-navbar-container uk-margin" uk-navbar="mode: click">
       <div class="uk-navbar-left">
-        <a class="uk-link-muted uk-margin-left uk-margin-right" href="index.html"
+        <a
+          class="uk-link-muted uk-margin-left uk-margin-right"
+          href="index.html"
           >A DAY OUT</a
         >
       </div>
@@ -30,6 +32,7 @@
     </nav>
     <div id="offcanvas-nav" uk-offcanvas="overlay: true; flip: true">
       <div class="uk-offcanvas-bar">
+        <button class="uk-offcanvas-close" type="button" uk-close></button>
         <ul class="uk-nav uk-nav-default">
           <hr />
           <li class="uk-nav-header">A DAY OUT</li>
@@ -60,58 +63,54 @@
     </div>
 
     <div class="uk-container uk-margin">
-      <div class="uk-inline uk-dark">
-        <img
-          src="https://i.pinimg.com/originals/0e/0d/70/0e0d70509fe4f2c140b987c9a823d787.png"
-          width="1800"
-          height="1200"
-          alt=""
-        />
+      <div class="uk-inline">
+        
+        <img src="assets/images/worldMap.png" id="worldMap" alt="world map" />
         <a
           class="uk-position-absolute uk-transform-center location-button"
-          style="left: 13%; top: 30%"
+          style="left: 22%; top: 42%"
           href="#"
           uk-marker
           id="North and Central America"
         ></a>
         <a
           class="uk-position-absolute uk-transform-center location-button"
-          style="left: 25%; top: 65%"
+          style="left: 30%; top: 70%"
           href="#"
           uk-marker
           id="South America"
         ></a>
         <a
           class="uk-position-absolute uk-transform-center location-button"
-          style="left: 50%; top: 22%"
+          style="left: 50%; top: 40%"
           href="#"
           uk-marker
           id="Europe"
         ></a>
         <a
           class="uk-position-absolute uk-transform-center location-button"
-          style="left: 75%; top: 35%"
+          style="left: 76%; top: 41%"
           href="#"
           uk-marker
           id="Asia"
         ></a>
         <a
           class="uk-position-absolute uk-transform-center location-button"
-          style="left: 70%; top: 40%"
+          style="left: 69%; top: 53.5%"
           href="#"
           uk-marker
           id="India"
         ></a>
         <a
           class="uk-position-absolute uk-transform-center location-button"
-          style="left: 50%; top: 50%"
+          style="left: 50%; top: 58%"
           href="#"
           uk-marker
           id="Africa"
         ></a>
-    </div>
-        <div class="uk-container">
-          <!-- <div>
+      </div>
+      <div class="uk-container">
+        <!-- <div>
             <p class="uk-margin-remove-bottom uk-text-lighter">
               Region 1:
               <span
@@ -129,25 +128,21 @@
               ></span>
             </p>
           </div> -->
-          <div class="uk-align-left uk-text-lighter">
-            <span
-              uk-icon="icon: refresh"
-              id="refresh-regions"
-              class="uk-margin-small-right"
-            ></span
-            >Clear choices
-          </div>
-          <div class="uk-align-right uk-text-lighter" id="go-button">
-            <p>
-              GO
-              <span
-                class="uk-margin-small-leftt"
-                uk-icon="chevron-right"
-              ></span>
-            </p>
-          </div>
+        <div class="uk-align-left uk-text-lighter">
+          <span
+            uk-icon="icon: refresh"
+            id="refresh-regions"
+            class="uk-margin-small-right"
+          ></span
+          >Clear choices
         </div>
-      
+        <div class="uk-align-right uk-text-lighter" id="go-button">
+          <p>
+            GO
+            <span class="uk-margin-small-leftt" uk-icon="chevron-right"></span>
+          </p>
+        </div>
+      </div>
     </div>
 
     <div class="uk-container uk-margin">
@@ -199,8 +194,6 @@
         </div>
       </div>
     </div>
-
-    
 
     <!-- JQuery -->
     <script

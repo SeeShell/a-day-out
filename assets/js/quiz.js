@@ -17,6 +17,7 @@ function renderQuizImage(objectIDsArray) {
   }).then(function(response) {
     var imageUrl = response.primaryImageSmall;
     var quizImage = $("<img>").attr("src", imageUrl);
+    quizImage.addClass("uk-align-center");
     $("#flash-card").append(quizImage);
 
     var artist = response.artistDisplayName;

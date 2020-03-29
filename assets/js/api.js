@@ -10,10 +10,12 @@ $(function() {
     if (firstRegionSelected) {
       region2 = $(this)[0].id;
       renderRegions(region2);
+      $(this).addClass("colorMarker");
     } else if (!firstRegionSelected) {
       region1 = $(this)[0].id;
       firstRegionSelected = true;
       renderRegions(region1);
+      $(this).addClass("colorMarker");
     }
 
     console.log(region1);
@@ -40,4 +42,5 @@ $("#refresh-regions").on("click", function() {
   region2 = "";
   localStorage.setItem("region1", region1);
   localStorage.setItem("region2", region2);
+  $(".location-button").removeClass("colorMarker");
 });

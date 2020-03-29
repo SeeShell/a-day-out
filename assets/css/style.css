@@ -1,3 +1,9 @@
 .colorMarker{
-background-color:rgb(235, 115, 115);
+background-color:rgb(44, 146, 103);
+}
+#map-background{
+    background-color: rgb(255, 252, 247);
+} 
+#info-container{
+    max-width: 90%;
 }

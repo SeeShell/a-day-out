@@ -1,3 +1,4 @@
+  
 $(function() {
   // -------------------------THE MET API---------------------------------
   var firstRegionSelected = false;
@@ -44,11 +45,15 @@ $(function() {
 
 //onclick REFRESH REGIONS--------
 $("#refresh-regions").on("click", function() {
-  $("#first-region").empty();
-  $("#second-region").empty();
+  
   region1 = "";
   region2 = "";
   localStorage.setItem("region1", region1);
   localStorage.setItem("region2", region2);
+  
   $(".location-button").removeClass("colorMarker");
+  
+  location.reload();
+ 
+
 });

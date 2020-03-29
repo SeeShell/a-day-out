@@ -13,143 +13,157 @@
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
+    <!--Navigation Bar containing with World Map, Markers and Off-canvas Toggle-->
     <div class="uk-position-relative" id="map-background">
-        <div class="uk-container uk-margin uk-box-shadow-medium" >
-            <div class="uk-inline uk-padding-top" >
-              
-              <img src="assets/images/warpedWorldNoBack.png" class="uk-margin-top uk-margin-bottom" id="worldMap" alt="world map" />
+      <div class="uk-container uk-margin uk-box-shadow-medium">
+        <div class="uk-inline uk-padding-top">
+          <img
+            src="assets/images/warpedWorldNoBack.png"
+            class="uk-margin-top uk-margin-bottom"
+            id="worldMap"
+            alt="world map"
+          />
+          <a
+            class="uk-position-absolute uk-transform-center location-button"
+            style="left: 20%; top: 42%"
+            href="#"
+            uk-marker
+            id="North and Central America"
+          ></a>
+          <a
+            class="uk-position-absolute uk-transform-center location-button"
+            style="left: 25%; top: 70%"
+            href="#"
+            uk-marker
+            id="South America"
+          ></a>
+          <a
+            class="uk-position-absolute uk-transform-center location-button"
+            style="left: 53%; top: 42%"
+            href="#"
+            uk-marker
+            id="Europe"
+          ></a>
+          <a
+            class="uk-position-absolute uk-transform-center location-button"
+            style="left: 76%; top: 41%"
+            href="#"
+            uk-marker
+            id="Asia"
+          ></a>
+          <a
+            class="uk-position-absolute uk-transform-center location-button"
+            style="left: 70%; top: 56%"
+            href="#"
+            uk-marker
+            id="India"
+          ></a>
+          <a
+            class="uk-position-absolute uk-transform-center location-button"
+            style="left: 50%; top: 60%"
+            href="#"
+            uk-marker
+            id="Africa"
+          ></a>
+        </div>
+        <div class="uk-position-top">
+          <nav
+            class="uk-navbar-container uk-navbar-transparent uk-margin"
+            uk-navbar="mode: click"
+          >
+            <div class="uk-navbar-right">
               <a
-                class="uk-position-absolute uk-transform-center location-button"
-                style="left: 20%; top: 42%"
+                class="uk-navbar-toggle"
+                uk-toggle="target: #offcanvas-nav"
+                uk-navbar-toggle-icon
                 href="#"
-                uk-marker
-                id="North and Central America"
-              ></a>
-              <a
-                class="uk-position-absolute uk-transform-center location-button"
-                style="left: 25%; top: 70%"
-                href="#"
-                uk-marker
-                id="South America"
-              ></a>
-              <a
-                class="uk-position-absolute uk-transform-center location-button"
-                style="left: 53%; top: 42%"
-                href="#"
-                uk-marker
-                id="Europe"
-              ></a>
-              <a
-                class="uk-position-absolute uk-transform-center location-button"
-                style="left: 76%; top: 41%"
-                href="#"
-                uk-marker
-                id="Asia"
-              ></a>
-              <a
-                class="uk-position-absolute uk-transform-center location-button"
-                style="left: 70%; top: 56%"
-                href="#"
-                uk-marker
-                id="India"
-              ></a>
-              <a
-                class="uk-position-absolute uk-transform-center location-button"
-                style="left: 50%; top: 60%"
-                href="#"
-                uk-marker
-                id="Africa"
               ></a>
             </div>
-        <div class="uk-position-top">
-    <nav class="uk-navbar-container uk-navbar-transparent uk-margin" uk-navbar="mode: click">
-        
-      <div class="uk-navbar-right">
-        <a
-          class="uk-navbar-toggle"
-          uk-toggle="target: #offcanvas-nav"
-          uk-navbar-toggle-icon
-          href="#"
-        ></a>
+          </nav>
+        </div>
       </div>
-      
-    </nav>
+      <div id="offcanvas-nav" uk-offcanvas="overlay: true; flip: true">
+        <div class="uk-offcanvas-bar">
+          <button class="uk-offcanvas-close" type="button" uk-close></button>
+          <ul class="uk-nav uk-nav-default">
+            <hr />
+            <li class="uk-nav-header">A DAY OUT</li>
+            <li class="uk-nav-divider"></li>
+            <li>
+              <a href="index.html"
+                ><span
+                  class="uk-margin-small-right"
+                  uk-icon="icon: world"
+                ></span>
+                HOME</a
+              >
+            </li>
+            <li>
+              <a href="project.html"
+                ><span
+                  class="uk-margin-small-right"
+                  uk-icon="icon: thumbnails"
+                ></span>
+                PROJECTS</a
+              >
+            </li>
+            <li>
+              <a href="search.html"
+                ><span
+                  class="uk-margin-small-right"
+                  uk-icon="icon: album"
+                ></span>
+                FLASH CARDS</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
-    </div>
-    <div id="offcanvas-nav" uk-offcanvas="overlay: true; flip: true">
-      <div class="uk-offcanvas-bar">
-        <button class="uk-offcanvas-close" type="button" uk-close></button>
-        <ul class="uk-nav uk-nav-default">
-          <hr />
-          <li class="uk-nav-header">A DAY OUT</li>
-          <li class="uk-nav-divider"></li>
-          <li>
-            <a href="index.html"
-              ><span class="uk-margin-small-right" uk-icon="icon: world"></span>
-              HOME</a
-            >
-          </li>
-          <li>
-            <a href="project.html"
-              ><span
-                class="uk-margin-small-right"
-                uk-icon="icon: thumbnails"
-              ></span>
-              PROJECTS</a
-            >
-          </li>
-          <li>
-            <a href="search.html"
-              ><span class="uk-margin-small-right" uk-icon="icon: album"></span>
-              FLASH CARDS</a
-            >
-          </li>
-        </ul>
+    <!--Clear button clears choices, Go button sends to project.html-->
+    <div class="uk-container uk-margin-remove-bottom">
+      <div class="uk-align-left uk-text-lighter">
+        <span
+          uk-icon="icon: refresh"
+          id="refresh-regions"
+          class="uk-margin-small-right"
+        ></span
+        >Clear choices
+      </div>
+      <div class="uk-align-right uk-text-lighter" id="go-button">
+        <p>
+          GO
+          <span class="uk-margin-small-leftt" uk-icon="chevron-right"></span>
+        </p>
       </div>
     </div>
 
-</div>
-      <div class="uk-container uk-margin-remove-bottom">
-        
-        <div class="uk-align-left uk-text-lighter">
-          <span
-            uk-icon="icon: refresh"
-            id="refresh-regions"
-            class="uk-margin-small-right"
-          ></span
-          >Clear choices
-        </div>
-        <div class="uk-align-right uk-text-lighter" id="go-button">
-          <p>
-            GO
-            <span class="uk-margin-small-leftt" uk-icon="chevron-right"></span>
-          </p>
-        </div>
-      </div>
-    
-
+    <!--Main info section-->
     <div class="uk-container uk-margin-small" id="info-container">
-      <p class="uk-text-light"> 
-        <span class="uk-text-large uk-text-lighter">A DAY OUT</span>...but in. Choose two regions above to compare objects from the Metropolitan Museum
-        of Art. Questions about the artworks and a project idea
-        will follow!
+      <p class="uk-text-light">
+        <span class="uk-text-large uk-text-lighter">A DAY OUT</span>...but in.
+        Choose two regions above to compare objects from the Metropolitan Museum
+        of Art. Questions about the artworks and a project idea will follow!
       </p>
     </div>
+    <!--Pop-up Card with directions for app-->
     <div class="uk-container uk-margin">
+      <!--Modal Toggle-->
       <a
         class="uk-button uk-button-default uk-text-lighter uk-box-shadow-medium"
         href="#modal-overflow"
         uk-toggle
         >More about this app</a
       >
+      <!--Modal Pop-up-->
       <div id="modal-overflow" uk-modal>
         <div class="uk-modal-dialog ">
           <div class="uk-modal-body" uk-overflow-auto>
             <p>Projects:</p>
             <p>
-              When you choose two regions above and press GO, objects from
-              those regions are randomly chosen from the Metropolitan Museum of
-              Art's sculpture collection.
+              When you choose two regions above and press GO, objects from those
+              regions are randomly chosen from the Metropolitan Museum of Art's
+              sculpture collection.
             </p>
             <p>
               Images and information about those objects, questions to ask

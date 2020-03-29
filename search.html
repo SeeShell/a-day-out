@@ -14,9 +14,12 @@
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
+    <!--Navigation Bar with Off-canvas Toggle-->
     <nav class="uk-navbar uk-navbar-container uk-margin">
       <div class="uk-navbar-left">
-        <a class="uk-link-muted uk-margin-left uk-margin-right" href="index.html"
+        <a
+          class="uk-link-muted uk-margin-left uk-margin-right"
+          href="index.html"
           >A DAY OUT</a
         >
       </div>
@@ -66,9 +69,8 @@
       <div
         class="uk-card uk-card-default uk-card-body uk-width-1-2@m"
         id="flash-card"
-      >
-      </div>
-      <!-- This is an anchor toggling the modal -->
+      ></div>
+      <!--Modal Toggle-->
       <div>
         <a
           href="#modal-flash-card"
@@ -88,13 +90,17 @@
           ></span>
         </p>
       </div>
-      <!-- This is the modal -->
+      <!--Modal Pop-up-->
       <div id="modal-flash-card" uk-modal>
         <div class="uk-modal-dialog uk-modal-body">
           <div id="flash-card-div"></div>
 
           <p class="uk-text-right">
-            <button class="uk-offcanvas-close uk-modal-close" type="button" uk-close></button>
+            <button
+              class="uk-offcanvas-close uk-modal-close"
+              type="button"
+              uk-close
+            ></button>
           </p>
         </div>
       </div>
@@ -106,7 +112,6 @@
       </div>
     </div>
 
-    
     <!-- JQuery -->
     <script
       src="https://code.jquery.com/jquery-3.4.1.min.js"

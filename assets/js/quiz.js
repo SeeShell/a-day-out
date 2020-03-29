@@ -69,7 +69,7 @@ $("#next-card").on("click", function() {
   renderQuizImage(objectIDsArray);
 });
 
-$("#clear-deck").on("click", function(){
+$("#clear-deck").on("click", function() {
   objectIDsArray = [];
-  localStorage.setItem("objectIDsArray",JSON.stringify(objectIDsArray));
-})
+  localStorage.setItem("objectIDsArray", JSON.stringify(objectIDsArray));
+});

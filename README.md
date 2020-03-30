@@ -1,1 +1,40 @@
-# Project-teamNameHere
+#  **A Day Out ... but In** #
+
+## **Description**
+
+-  Designed to help art enthusiast parents and their teens who find themselves unable attend and educate themselves through the Metropolitan Museum of Art. Starting on the **Index Page** users choose two regions on the home page. Once they click *GO* they are taken to the **Projects Page**. User is then presented with one statue from each chosen region. As they scroll they are presented with information one each image, links to the Metropolitan Museum of Art, and finally a cuisine option from each region *image and recipe* included. They have the option to render more questions, projects, or even selecting completely new regions. All the past images are stored, and the user may quiz themselves on the **Flashcard Page**.
+
+    - ### **HTML pages**
+         1. [index.html](index.html)    the main home page
+         2. [project.html](project.html)    the html for the projects page to run correctly.
+         3. [flashcards.html](flashcards.html)  the html for the flashcards page to run correctly
+    
+    - ### **JavaScript Sheets** 
+         1. [index.js](assets/js/index.js)  the JavaScript for the home page to run correctly
+         2. [project.js](assets/js/project.js)  the JavaScript for the project page to run correctly
+         3. [flashcards.js](assets/js/flashcards.js)    the JavaScript for the flashcards page to run correctly
+
+
+    - ### **Style Sheets**
+         1. [style.css](assets/css/style.css) (created by Shelley Sims)
+         2. [uiKit](https://getuikit.com/docs/introduction)
+
+
+### **Image Files** 
+![alt](assets/images/warpedWorldNoBack.png)
+- World Map used on Home Page
+        
+## **Visuals**
+- Images from the Metropolitan Museum of Art API
+- Images of recipes from Edamam API
+- Flashcards are able to flip enabling user to study already viewed artwork
+
+## **Usage**
+- User may view multiple sculptures and cuisine options from around the world. Enhancing their experience with projects and quizzes inspired from previously viewed artwork.
+
+## **Support**
+- e-mail:
+    - charr.mt@gmail.com 
+    - 323seeshell@gmail.com
+    - rubenburrell828@gmail.com
+- [GitHub](https://https://github.com/SeeShell/a-day-out)

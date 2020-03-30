@@ -1,7 +1,9 @@
+//get all previous art
 var objectIDsArray = JSON.parse(localStorage.getItem("objectIDsArray"));
 
 renderQuizImage(objectIDsArray);
 
+//get flash cards
 function renderQuizImage(objectIDsArray) {
   $("#flash-card").empty();
   $("#flash-card-div").empty();
@@ -11,6 +13,7 @@ function renderQuizImage(objectIDsArray) {
     "https://collectionapi.metmuseum.org/public/collection/v1/objects/" +
     randObjectID;
 
+  //call AJAX to display image and information
   $.ajax({
     url: queryURL,
     method: "GET"
@@ -27,6 +30,7 @@ function renderQuizImage(objectIDsArray) {
     var medium = response.medium;
     var country = response.country;
     var dimensions = response.dimensions;
+    var nationality= response.artistNationality
 
     var titleCard = $("<h2>").text(title);
     var artistCard = $("<p>").text("Artist: " + artist);
@@ -48,12 +52,13 @@ function renderQuizImage(objectIDsArray) {
       var mediumCard = $("<p>").text("Medium: Unknown");
     }
     if (country === "") {
-      var countryCard = $("<p>").text("Country: Unknown");
+      var countryCard = $("<p>").text("Country: " + nationality);
     }
     if (dimensions === "") {
       var dimensionsCard = $("<p>").text("Country: Unknown");
     }
 
+    //display API
     $("#flash-card-div").append(
       titleCard,
       artistCard,

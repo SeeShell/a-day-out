@@ -187,7 +187,7 @@ var projectObj = {
     questions: [
       "Look at the dimensions for each object. Imagine how big the object would appear to you if you were viewing it in person. ",
       "How does the size of an object change the way you experience it?",
-      "Do you think the objects above are made for a public or private settings?",
+      "Do you think the objects above are made for a public or private setting?",
       "Does the size distance you? Or draw you in?"
     ],
     project: [
@@ -261,7 +261,7 @@ function renderProject(projectObj) {
   projectDiv.empty();
   questionDiv.empty();
 
-  var projectObjIndex = Math.floor(Math.random() * 3);
+  var projectObjIndex = Math.floor(Math.random() * 4);
 
   var currentSet = projectObj[projectObjIndex];
 

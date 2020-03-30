@@ -21,8 +21,8 @@
 
 
 ### **Image Files** 
-![alt](assets/images/warpedWorldNoBack.png)
-- World Map used on Home Page
+![alt](assets/images/aDayOutObjectZoom.png)
+- Example of a project page
         
 ## **Visuals**
 - Images from the Metropolitan Museum of Art API

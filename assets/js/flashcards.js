@@ -30,6 +30,7 @@ function renderQuizImage(objectIDsArray) {
     var medium = response.medium;
     var country = response.country;
     var dimensions = response.dimensions;
+    var nationality= response.artistNationality
 
     var titleCard = $("<h2>").text(title);
     var artistCard = $("<p>").text("Artist: " + artist);
@@ -51,7 +52,7 @@ function renderQuizImage(objectIDsArray) {
       var mediumCard = $("<p>").text("Medium: Unknown");
     }
     if (country === "") {
-      var countryCard = $("<p>").text("Country: Unknown");
+      var countryCard = $("<p>").text("Country: " + nationality);
     }
     if (dimensions === "") {
       var dimensionsCard = $("<p>").text("Country: Unknown");

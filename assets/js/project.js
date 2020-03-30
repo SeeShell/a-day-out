@@ -7,7 +7,7 @@ if (region1 === null || region2 === null) {
   window.location.href = "index.html";
 }
 
-//Funtion to initialize page and render object cards
+//Function to initialize page and render object cards
 $(function() {
   var queryURL1 =
     "https://collectionapi.metmuseum.org/public/collection/v1/search?geoLocation=" +

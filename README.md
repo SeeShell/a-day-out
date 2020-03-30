@@ -2,7 +2,7 @@
 
 ## **Description**
 
--  Designed to help art enthusiast parents and their teens who find themselves unable attend and educate themselves through the Metropolitan Museum of Art. Users choose two regions on the home page. Once they click **GO** they are taken to the *Projects* page. They are then presented with one statue from each chosen region. As they scroll they are presented with information one each image, links to the Metropolitan Museum of Art, and finally a cuisine option from each region *image and recipe* included. They have the option to render more questions, projects, or even selecting completely new regions. All the past images are stored, and the user may quiz themselves on the *Flashcards* page.
+-  Designed to help art enthusiast parents and their teens who find themselves unable attend and educate themselves through the Metropolitan Museum of Art. Starting on the **Index Page** users choose two regions on the home page. Once they click *GO* they are taken to the **Projects Page**. User is then presented with one statue from each chosen region. As they scroll they are presented with information one each image, links to the Metropolitan Museum of Art, and finally a cuisine option from each region *image and recipe* included. They have the option to render more questions, projects, or even selecting completely new regions. All the past images are stored, and the user may quiz themselves on the **Flashcard Page**.
 
     - ### **HTML pages**
          1. [index.html](index.html)    the main home page
@@ -21,7 +21,7 @@
 
 
 ### **Image Files** 
-![alt](assets/images/worldMap.png)
+![alt](assets/images/warpedWorldNoBack.png)
 - World Map used on Home Page
         
 ## **Visuals**

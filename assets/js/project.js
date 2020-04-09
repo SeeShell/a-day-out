@@ -129,7 +129,7 @@ $(function() {
         "https://collectionapi.metmuseum.org/public/collection/v1/objects/" +
         randObjectID2;
     }
-
+    
     $.ajax({
       url: queryURL,
       method: "GET"

@@ -21,7 +21,7 @@
 
 
 ### **Image Files** 
-![alt](assets/images/warpedWorldNoBack.png)
+![Gif](ADayOut.gif)
 - World Map used on Home Page
         
 ## **Visuals**

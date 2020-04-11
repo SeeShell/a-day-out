@@ -65,7 +65,8 @@
 
 ## **Support**
 [<img src="https://avatars2.githubusercontent.com/u/60075663?v=4" alt="avatar" style="border-radius: 75px" width="75"/>](https://https://github.com/SeeShell)
-[<img src="https://avatars3.githubusercontent.com/u/60668617?v=4" alt="avatar" style="border-radius: 75px" width="75"/>](https://github.com/charrmountain)
+- 323seeshell@gmail.com
 
- 323seeshell@gmail.com                charr.mt@gmail.com 
+[<img src="https://avatars3.githubusercontent.com/u/60668617?v=4" alt="avatar" style="border-radius: 75px" width="75"/>](https://github.com/charrmountain)
+- charr.mt@gmail.com 
  

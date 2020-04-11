@@ -50,8 +50,8 @@
 
 
 ![Gif](ADayOut.gif)
-- World Map used on Home Page
 
+- Demonstration of application
 
 
 ## **Visuals**

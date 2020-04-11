@@ -48,8 +48,10 @@
 
 ### **Image Files** 
 
+
 ![Gif](ADayOut.gif)
 - World Map used on Home Page
+
 
 
 ## **Visuals**

@@ -48,9 +48,11 @@
 
 ### **Image Files** 
 
+
 ![Gif](ADayOut.gif)
 
 - Demonstration of application
+
 
 ## **Visuals**
 

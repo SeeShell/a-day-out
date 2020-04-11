@@ -3,7 +3,7 @@ var region1 = localStorage.getItem("region1");
 var region2 = localStorage.getItem("region2");
 
 //Redirects user to home page if no saved regions are stored
-if (region1 === null || region2 === null) {
+if (region1 === undefined || region2 === undefined) {
   window.location.href = "index.html";
 }
 
@@ -187,7 +187,7 @@ var projectObj = {
     questions: [
       "Look at the dimensions for each object. Imagine how big the object would appear to you if you were viewing it in person. ",
       "How does the size of an object change the way you experience it?",
-      "Do you think the objects above are made for a public or private settings?",
+      "Do you think the objects above are made for a public or private setting?",
       "Does the size distance you? Or draw you in?"
     ],
     project: [
@@ -261,7 +261,7 @@ function renderProject(projectObj) {
   projectDiv.empty();
   questionDiv.empty();
 
-  var projectObjIndex = Math.floor(Math.random() * 3);
+  var projectObjIndex = Math.floor(Math.random() * 4);
 
   var currentSet = projectObj[projectObjIndex];
 
